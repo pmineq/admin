@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+/* ===================================================
+*
+*    Layout
+*    2021-11-21 작성
+*
+====================================================*/
+
+* {margin: 0; padding: 0; }
+
+html, body {width: 100%; height: 100%; font-family: 'Roboto','NotoSansKR', Apple SD Gothic Neo, 'Microsoft Yahei', 'Microsoft MingLiU', Arial, 돋움, dotum, sans-serif; font-weight: 400; font-style: normal; font-stretch: normal; font-size: 14px; line-height: 1.43; color: #111; word-break: keep-all; word-wrap: break-word; white-space: normal; }
+h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; }
+ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
+
+.wrapper {width: 100%; min-height: 100%; }
+.noto {font-family: 'NotoSansKR', Apple SD Gothic Neo, 'Microsoft Yahei', 'Microsoft MingLiU', Arial, 돋움, dotum, sans-serif; }
+
+/* ===================================================
+	Nav
+====================================================*/
+.nav-wrap {position: fixed; top: 0; left: 0; width: 23%; max-width: 300px; height: 100vh; padding: 12px 20px; box-shadow: 0px 5px 16px 3px rgba(141, 141, 141, 0.1); box-sizing: border-box; background-color: #fff; overflow: hidden; overflow-y: auto; z-index: 10; }
+
+.logo {display: block; height: 30px; font-size: 20px; line-height: 30px; }
+.logo img {display: block; max-width: 100%; max-height: 100%; margin: 0 auto; }
+
+.nav {width: 100%; margin-top: 32px; }
+.nav li {}
+.nav-title {position: relative; width: 100%; height: auto; padding: 12px 12px; border: 0; text-align: left; font-size: 15px; font-weight: 400; line-height: inherit; }
+.nav-title:after {content:""; position: absolute; top: 50%; right: 20px; width: 8px; height: 2px; background-color: #888; transform: translateY(-50%); }
+.nav-title:before {content:""; position: absolute; top: 50%; right: 20px; width: 8px; height: 2px; background-color: #888; transform: translateY(-50%) rotate(90deg); }
+.nav-title:hover {border: 0; background-color: #f9f9f9; }
+.nav-title:hover:after {top: 50%; left: auto; right: 20px; width: 8px; height: 2px; background-color: #888; }
+
+.active .nav-title {background-color: #eff7fb; font-weight: 500; color: #0080c7; }
+.active .nav-title:after {background-color: #0080c7; }
+.active .nav-title:before {content: none; }
+
+
+.nav-category {display: none; width: 100%; padding: 8px 12px; box-sizing: border-box; font-size: 15px; font-weight: 500; color: #222; }
+.nav-category .category-menu {display: block; width: 100%; padding: 8px 8px; font-size: 14px; font-weight: 400; color: #666; }
+.nav-category .category-menu:hover {color: #0080c7; }
+.active .nav-category {display: block; }
+
+
+
+
+/* ===================================================
+	Container
+====================================================*/
+.container {position: relative; float: right; width: 77%; min-width: calc(100% - 300px); height: 100%; min-height: 100vh; margin-left: 23%; background-color: #f7f8f9; }
+
+
+
+
+/* ===================================================
+	Header
+====================================================*/
+.header {position: relative; width: 100%; padding: 12px 20px; box-sizing: border-box; }
+.header:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+.header-util {float: right; }
+.header-util .user-profile {position: relative; width: 32px; height: 32px; border: 1px solid #eee; border-radius: 999px; background-color: #fff; overflow: hidden; }
+.header-util .user-profile img {display: block; width: 100%; margin: 0 auto; }
+
+
+
+/* ===================================================
+	Contents
+====================================================*/
+.contents {position: relative; width: 100%; height: 100%; padding: 24px 24px; box-sizing: border-box; }
+
+
+
+
+

@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+
+/* ===================================================
+*
+*    Components
+*    2021-11-21 작성
+*
+====================================================*/
+hr {border: 0; border-top: 1px solid #eee; }
+.clear:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+
+/* ===================================================
+	Button
+====================================================*/
+a {text-decoration: none; color: inherit; }
+
+.btn,
+button {display: inline-block; position: relative; min-width: 40px;  height: 40px; margin: 0; padding: 0 24px; border: 1px solid #ddd; box-sizing: border-box; border-radius: 3px; outline: none; background-color: transparent; font-size: 14px; font-weight: 400; color: #666; line-height: 38px; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-appearance: none; }
+
+.btn:hover:after,
+button:hover:after {content:""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.04); mix-blend-mode: multiply; }
+
+
+.btn.full,
+button.full {width: 100% !important; }
+.btn.half,
+button.half {width: 50% !important; }
+
+.btn.big,
+button.big {height: 50px; line-height: 48px; }
+.btn.small,
+button.small {height: 30px; padding: 0 16px; line-height: 28px; font-size: 0.8em; }
+
+.btn-group {}
+.btn-group:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.btn-group .btn,
+.btn-group button {float: left; }
+.btn-group .btn + .btn,
+.btn-group .btn + button,
+.btn-group button + .btn,
+.btn-group button + button {margin-left: 2%; }
+
+.btn-group.half .btn,
+.btn-group.half button {width: 48%; }
+
+.btn-group.full .btn,
+.btn-group.full button {width: 100%; margin-left: 0; }
+.btn-group.full .btn + .btn,
+.btn-group.full .btn + button,
+.btn-group.full button + .btn,
+.btn-group.full button + button {margin-top: 2%; }
+
+
+
+
+/* ===================================================
+	color
+====================================================*/
+.color-main {color: #0080c7; }
+.color-red {color: #df0000; }
+
+.bg-main {background-color: #0080c7; border-color: #0080c7; color: #fff; }
+.bg-red {background-color: #df0000; border-color: #df0000; color: #fff; }
+.bg-black {background-color: #333; border-color: #333; color: #fff; }
+
+.line-main {border-color: #0080c7; color: #0080c7; }
+.line-red {border-color: #df0000; color: #df0000; }
+.line-black {border-color: #333; color: #333; }
+
+
+
+
+/* ===================================================
+	form
+====================================================*/
+
+/* Text Field 입력필드
+-----------------------------------------------------*/
+input,
+.input-text {display: inline-block; height: 40px; padding: 0 12px; background-color: #fff; border: 1px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; font-size: 14px; color: #444; }
+input:focus,
+.input-text:focus {border-color: #0080c7; background-color: #fff; }
+
+
+
+/* placeholder */
+.input-text:-webkit-input-placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text:-moz-placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text:-ms-input-placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text::-ms-input-placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text::-moz-placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text::placeholder  {color: #aaa !important; font-weight: 400 !important; }
+.input-text:placeholder  {color: #aaa !important; font-weight: 400 !important; }
+
+
+/* readonly */
+input[type="text"]:read-only,
+.input-text:read-only {background-color: #eee; border-color: #ccc; color: #888; }
+.input-text.readonly {background-color: #eee; border-color: #ccc; color: #888; }
+input[type="text"][readonly="readonly"] {background-color: #eee; border-color: #ccc; color: #888; }
+input[type="text"].readonly {background-color: #eee; border-color: #ccc; color: #888; }
+
+.input-text:read-only:focus {background-color: #eee; border-color: #ccc; color: #888; }
+.input-text.readonly:focus {background-color: #eee; border-color: #ccc; color: #888; }
+input[type="text"][readonly="readonly"]:focus {background-color: #eee; border-color: #ccc; color: #888; }
+input[type="text"].readonly:focus {background-color: #eee; border-color: #ccc; color: #888; }
+
+
+/* disabled */
+.input-text:disabled {background-color: #eee; color: #888; cursor: not-allowed; }
+.input-text.disabled {background-color: #eee; color: #888; cursor: not-allowed; }
+input[type="text"]:disabled {background-color: #eee; color: #888; cursor: not-allowed; }
+input[type="text"][disabled="disabled"] {background-color: #eee; color: #888; cursor: not-allowed; }
+
+.input-text:disabled:focus {background-color: #eee; border-color: #ccc;  color: #888; cursor: not-allowed; }
+.input-text.disabled:focus {background-color: #eee; border-color: #ccc; color: #888; cursor: not-allowed; }
+input[type="text"]:disabled:focus {background-color: #eee; border-color: #ccc; color: #888; cursor: not-allowed; }
+input[type="text"][disabled="disabled"]:focus {background-color: #eee; border-color: #ccc; color: #888; cursor: not-allowed; }
+
+input.big,
+.input-text.big {height: 50px; }
+input.small,
+.input-text.small {height: 30px; font-size: 0.8em; }
+
+input.full,
+.input-text.full {width: 100%; }
+input.half,
+.input-text.half {width: 50%; }
+
+
+
+
+/* Text Area 입력영역
+-----------------------------------------------------*/
+textarea,
+.textarea {display: block; width: 100%; height: 200px; padding: 12px 12px; background-color: #fff; border: 1px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; font-size: 14px; font-weight: 400; color: #444; }
+
+textarea:focus,
+.textarea:focus {border-color: #0080c7; background-color: #fff; }
+
+
+
+/* Select 콤보상자
+-----------------------------------------------------*/
+select,
+.select {display: inline-block; height: 40px; padding: 0 32px 0 12px; border: 1px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; background-image: url("../images/common/select.png"); background-repeat: no-repeat;  background-position: right 12px center; font-size: 14px; color: #444;  }
+
+select:focus,
+.select:focus {border-color: #0080c7; background-color: #fff; }
+
+select.readonly,
+.select.readonly {background-color: #eee; border-color: #ccc; color: #888; }
+
+select.big,
+.select.big {height: 50px; }
+select.small,
+.select.small {height: 30px; font-size: 0.8em; }
+
+select.full,
+.select.full {width: 100%; }
+select.half,
+.select.half {width: 50%; }
+
+
+.input-title {display: block; margin-bottom: 0.5%; font-size: 13px; font-weight: 400; }
+
+
+
+/* Checkbox , radio
+-----------------------------------------------------*/
+.input-check,
+input[type="checkbox"] {width: 16px; height: 16px; -webkit-appearance: auto; -moz-appearance: auto; appearance: auto; vertical-align: middle; }
+.input-check + label,
+input[type="checkbox"] + label {margin-left: 0.5%; line-height: 16px; font-size: 14px; vertical-align: middle; }
+
+.input-radio,
+input[type="radio"] {width: 16px; height: 16px; -webkit-appearance: auto; -moz-appearance: auto; appearance: auto; }
+
+
+.check-group {}
+.check-group:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.check-group .checkbox {float: left; }
+.check-group .checkbox input {display: inline-flex; }
+.check-group .checkbox label {display: inline-flex; width: calc(100% - 20px - 0.5%); }
+.check-group .checkbox + .checkbox {margin-left: 2%; }
+
+.check-group.column {}
+.check-group.column .checkbox {float: none; }
+.check-group.column .checkbox + .checkbox {margin-left: 0; margin-top: 2%; }
+
+.radio-group {}
+.radio-group:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.radio-group .radiobox {float: left; }
+.radio-group .radiobox input {display: inline-flex; }
+.radio-group .radiobox label {display: inline-flex; width: calc(100% - 20px - 0.5%); }
+.radio-group .radiobox + .radiobox {margin-left: 2%; }
+
+.radio-group.column {}
+.radio-group.column .radiobox {float: none; }
+.radio-group.column .radiobox + .radiobox {margin-left: 0; margin-top: 2%; }
+
+
+
+
+
+
