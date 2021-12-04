@@ -284,12 +284,12 @@ select.half,
 /* Checkbox , radio
 -----------------------------------------------------*/
 .input-check,
-input[type="checkbox"] {width: 16px; height: 16px; -webkit-appearance: auto; -moz-appearance: auto; appearance: auto; vertical-align: middle; }
+input[type="checkbox"] {width: 16px; height: 16px; vertical-align: middle; }
 .input-check + label,
 input[type="checkbox"] + label {margin-left: 0.5%; line-height: 16px; font-size: 14px; vertical-align: middle; cursor: pointer; }
 
 .input-radio,
-input[type="radio"] {width: 16px; height: 16px; -webkit-appearance: auto; -moz-appearance: auto; appearance: auto; cursor: pointer; }
+input[type="radio"] {width: 16px; height: 16px; cursor: pointer; }
 
 
 .check-group {}
@@ -382,7 +382,7 @@ table tr:last-child {border-color: #ccc; }
 .popup-wrap {display: none; position: fixed; top: 0; right: 0; width: calc(100% - 230px); height: 100%; background-color: rgba(0, 0, 0, 0.1); }
 
 .popup {position: absolute; top: 50%; left: 50%; width: 500px; border-radius: 5px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); background-color: #fff; transform: translate(-50%, -50%); }
-.popup-header {position: relative; padding: 20px 20px 10px; box-sizing: border-box; }
+.popup-header {position: relative; padding: 10px 20px 10px; border: 1px solid #eee; box-sizing: border-box; }
 .popup-header:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
 .popup-header h3 {float: left; font-size: 18px; font-weight: 700; line-height: 30px; }
 .popup-close {position: relative; float: right; width: 30px; min-width: auto; height: 30px; border: 0; padding: 0;  }
@@ -410,7 +410,7 @@ table tr:last-child {border-color: #ccc; }
 .image-wrap:hover .btn-group {opacity: 1; }
 .image-wrap .btn-group:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
 .image-wrap .btn-group a,
-.image-wrap .btn-group button {float: left; width: 50%; margin: 0; border: 0; border-radius: 0; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.6); color: #fff; }
+.image-wrap .btn-group button {float: left; width: 50%; margin: 0; border: 0; border-radius: 0; box-sizing: border-box; background-color: rgba(0, 0, 0, 0.6); font-size: 13px; color: #fff; }
 
 .image-wrap .btn-group a:hover,
 .image-wrap .btn-group button:hover {color: #0080c7; }
