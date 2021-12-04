@@ -9,11 +9,13 @@
   <link rel="stylesheet" href="../AppData/css/fonts.css">
   <link rel="stylesheet" href="../AppData/css/normalize.css">
   <link rel="stylesheet" href="../AppData/css/reset.css">
+  <link rel="stylesheet" href="../AppData/css/jquery-ui.css">
   <link rel="stylesheet" href="../AppData/css/layout.css">
   <link rel="stylesheet" href="../AppData/css/components.css">
 
   <script src="../AppData/js/jquery.js"></script>
-  <script src="../AppData/js/common.js"></script>
+  <script src="../AppData/js/jquery-ui.js"></script>
+  <script src="../AppData/js/design.js"></script>
 
 
 </head>
@@ -21,32 +23,71 @@
 <body>
 
 <style type="text/css">
-	hr {border-top: 1px dashed #ccc; }
+	hr {margin: 40px 0; border-top: 1px dashed #ccc; }
 	section {margin: 10% 0; }
 	section:first-child {margin-top: 0; }
 	.ui-title {margin-bottom: 16px; padding-bottom: 8px; border-bottom: 3px solid #666; font-size: 28px; font-weight: 700; color: #111; }
 	.ui-title02 {display: block; margin-bottom: 12px;font-size: 18px; font-weight: 500; color: #444; }
+	.ui-title02 .ui-text {margin: 0; }
 
 	.ui-text {margin: 36px 0 16px; font-size: 14px; font-weight: 400; color: #444; }
 
 	article {width: 100%; margin: 20px 0; padding: 24px 20px; border: 1px solid #eee; border-radius: 3px; box-sizing: border-box; background-color: #fff; }
 	.division {margin: 20px 0; }
+	.division > p {color: #666; }
 
 </style>
 
 
 
 <div id="wrapper" class="wrapper">
+	<!-- S: loading -->
+	<div class="loading-wrap">
+		<div class="loading"> 
+		  <div class="bar bar1"></div>
+		  <div class="bar bar2"></div>
+		  <div class="bar bar3"></div>
+		  <div class="bar bar4"></div>
+		  <div class="bar bar5"></div>
+		  <div class="bar bar6"></div>
+		  <div class="bar bar7"></div>
+		  <div class="bar bar8"></div>
+		  <div class="bar bar9"></div>
+		  <div class="bar bar10"></div>
+		  <div class="bar bar11"></div>
+		  <div class="bar bar12"></div>
+		</div>
+	</div>
+	<!-- E: loading -->
 
-	<nav class="nav-wrap">
+	<!-- S: top 상단이동 -->
+	<div class="sticky-wrap">	
+		<button type="button" class="sticky-top"><span>TOP</span></button>
+	</div>
+
+	<!-- S: header -->
+	<header id="header" class="header">
 		<h1 class="logo">
-			<a href="#" alt="logo">
+			<a href="components.html" alt="logo">
 				<img src="../AppData/images/common/logo.png" alt="logo">
 			</a>
 		</h1>
+		<div class="header-util">
+			<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+			<div class="header-right"> 
+				<ul>
+					<li><button type="button" class="header-user"><span>mine_pp</span></button></li>
+					<li><button type="button" class="header-logout">Logout</button></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- E: header -->
 
+
+	<nav class="nav-wrap">
 		<ul class="nav">
-			<li class="depth active">
+			<li class="depth">
 				<button class="nav-title">Menu01</button>
 				<ul class="nav-category">
 					<li>
@@ -70,20 +111,22 @@
 			</li>
 			<li class="depth">
 				<button class="nav-title">Menu03</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu active">page01</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">page02</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="page.html" class="nav-title">Page</a>
 			</li>
 		</ul>
 	</nav>
 
 	<div class="container">
-		<header id="header" class="header">
-
-			<div class="header-util">
-				<div class="user-profile">
-					<img src="/" alt="profile">
-				</div>
-			</div>
-		</header>
-
 
 		<div class="contents">
 			<section> 
@@ -142,6 +185,70 @@
 						</div>
 					</article>
 			</section>
+
+			<section> 
+				<h2 class="ui-title">TITLE</h2>
+				<p class="ui-text"></p>
+				<article> 
+					<div class="division"> 
+						<strong class="ui-title02">.title<p class="ui-text">페이지 상단 타이틀</p></strong>
+						<h2 class="title">Title</h2>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.title.medium<p class="ui-text">중타이틀</p></strong>
+						<h3 class="title medium">Title</h3>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.title.small<p class="ui-text">소타이틀</p></strong>
+						<h3 class="title small">Title</h3>
+					</div>
+					<hr>
+					<div class="division"> 
+						<strong class="ui-title02">.page-header > .title + .breadcrumb<p class="ui-text">페이지 상단 타이틀 + breadcrumb</p></strong>
+						<div class="page-header"> 
+							<h2 class="title">Page Title</h2>
+							<ul class="breadcrumb">
+								<li>depth01</li>
+								<li>depth02</li>
+								<li class="active">depth03</li>
+							</ul>
+						</div>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.page-header > .title + .btn<p class="ui-text">타이틀과 버튼을 같이 넣는 경우</p></strong>
+						<div class="page-header">
+							<h3 class="title medium">Title</h3>
+							<button type="button">BUTTON</button>
+						</div>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.page-header > .title + .select<p class="ui-text">타이틀과 셀렉트를 같이 넣는 경우</p></strong>
+						<div class="page-header">
+							<h3 class="title medium">Title</h3>
+							<select> 
+								<option>option01</option>
+								<option>option02</option>
+								<option>option03</option>
+							</select>
+						</div>
+					</div>
+					<hr>
+					<div class="division"> 
+						<strong class="ui-title02">.title > (.guide + (.guide-wrap>.guide-box)) <p class="ui-text">.title 안에 .guide 버튼과, .guide-wrap을 넣어주셔야 합니다.</p></strong>
+						<div class="page-header">
+							<strong class="title">title
+								<button type="button" class="guide"><span class="visuallyhidden">가이드 보기</span></button>
+								<div class="guide-wrap">
+									<div class="guide-box"> 
+										<p>설명설명설명 안녕하세요 설명입니다 안녕하세요 설명을 적을 수 있습니다 예를 들어 페이지에 대한 설명이라거나 중타이틀에 넣을 수 있겠지요</p>
+									</div>
+								</div> 
+							</strong>
+						</div>
+					</div>
+				</article>
+			</section>
+
 			<section> 
 				<h2 class="ui-title">COLOR</h2>
 				<article>
@@ -172,6 +279,31 @@
 				</article>
 			</section>
 
+			<section>
+				<h2 class="ui-title">LOADING</h2>
+				<p class="ui-text">head 파일에 공통으로 넣을 로딩바 입니다.<br>딜레이 되는 경우가 있을 때, .loading-wrap만 show 해주면 됩니다.</p>
+				<article> 
+					<div class="division">
+						<h3 class="ui-title02">.loading-wrap > .loading >.bar(1~12)</h3>
+						<div class="loading-wrap" style="display: block; position: relative; width: 200px; min-width: auto; height: 140px; border: 1px solid #ccc; border-radius: 3px; z-index: 1; ">
+							<div class="loading" style="top: calc(50% - 30px); "> 
+							  <div class="bar bar1"></div>
+							  <div class="bar bar2"></div>
+							  <div class="bar bar3"></div>
+							  <div class="bar bar4"></div>
+							  <div class="bar bar5"></div>
+							  <div class="bar bar6"></div>
+							  <div class="bar bar7"></div>
+							  <div class="bar bar8"></div>
+							  <div class="bar bar9"></div>
+							  <div class="bar bar10"></div>
+							  <div class="bar bar11"></div>
+							  <div class="bar bar12"></div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
 
 			<section>
 				<h2 class="ui-title">BUTTON</h2>
@@ -237,6 +369,41 @@
 						<button type="button" class="line-black">BUTTON</button>
 						<a href="javascript:void(0)" class="btn line-black">BUTTON</a>
 					</div>
+					<hr>
+					<div class="division"> 
+						<strong class="ui-title02">.btn-round</strong>
+						<button type="button" class="btn-round">BUTTON</button>
+						<a href="#" class="btn btn-round">BUTTON</a>
+					</div>
+					<hr>
+					<div class="division"> 
+						<strong class="ui-title02">.btn-icon .download</strong>
+						<button type="button" class="btn-icon download">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon download">BUTTON</a>
+						<button type="button" class="btn-icon download small">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon download small">BUTTON</a>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.btn-icon .ppt</strong>
+						<button type="button" class="btn-icon ppt">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon ppt">BUTTON</a>
+						<button type="button" class="btn-icon ppt small">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon ppt small">BUTTON</a>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.btn-icon .excel</strong>
+						<button type="button" class="btn-icon excel">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon excel">BUTTON</a>
+						<button type="button" class="btn-icon excel small">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon excel small">BUTTON</a>
+					</div>
+					<div class="division"> 
+						<strong class="ui-title02">.btn-icon .word</strong>
+						<button type="button" class="btn-icon word">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon word">BUTTON</a>
+						<button type="button" class="btn-icon word small">BUTTON</button>
+						<a href="javascript:void(0)" class="btn btn-icon word small">BUTTON</a>
+					</div>
 
 				</article>
 
@@ -269,7 +436,7 @@
 
 			<section> 
 				<h2 class="ui-title">FORM</h2>
-				<p class="ui-text">졸리다</p>
+				<p class="ui-text">아래에서 확인 가능합니다.</p>
 				<article> 
 					<div class="division"> 
 						<strong class="ui-title02">input</strong>
@@ -371,11 +538,11 @@
 						<strong class="ui-title02">label + input</strong>
 						<p>label class : input-title</p><br>
 						<div class="clear">
-							<div style="float: left; width: 33.333%; ">
+							<div class="form-item">
 								<label for="input01" class="input-title">input label</label>
 								<input type="text" id="input01">
 							</div>
-							<div style="float: left; width: 33.333%; ">
+							<div class="form-item">
 								<label for="input02" class="input-title">인풋 라벨 타이틀</label>
 								<input type="text" id="input02">
 							</div>
@@ -386,8 +553,10 @@
 				<article> 
 					<div class="division"> 
 						<strong class="ui-title02">checkbox</strong>
-						<input type="checkbox" id="check01">
-						<label for="check01">check01</label>
+						<div class="checkbox">
+							<input type="checkbox" id="check01">
+							<label for="check01">check01</label>
+						</div>
 					</div>
 					<div class="division">
 						<strong class="ui-title02">check-group</strong>
@@ -427,8 +596,10 @@
 					<hr>
 					<div class="division"> 
 						<strong class="ui-title02">radio</strong>
-						<input type="radio" id="radio">
-						<label for="radio">radio</label>
+						<div class="radiobox">
+							<input type="radio" id="radio">
+							<label for="radio">radio</label>
+						</div>
 					</div>
 					<div class="division">
 						<strong class="ui-title02">radio-group</strong>
@@ -467,6 +638,327 @@
 				</article>
 			</section>
 
+			<section> 
+				<h2 class="ui-title">Pagenation</h2>
+				<article> 
+					<div class="division"> 
+						<div class="pagination-wrap"> 
+							<ul class="pagination"> 
+								<li>
+									<span class="page-pprev"><span class="visuallyhidden">처음으로 이동</span></span>
+								</li>
+								<li>
+									<span class="page-prev"><span class="visuallyhidden">이전페이지 이동</span></span>
+								</li>
+								<li> 
+									<span>1</span>
+								</li>
+								<li> 
+									<span>2</span>
+								</li>
+								<li class="current"> 
+									<span>3</span>
+								</li>
+								<li> 
+									<span>4</span>
+								</li>
+								<li> 
+									<span>5</span>
+								</li>
+								<li>
+									<span class="page-next"><span class="visuallyhidden">다음페이지 이동</span></span>
+								</li>
+								<li>
+									<span class="page-nnext"><span class="visuallyhidden">마지막으로 이동</span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<section> 
+				<h2 class="ui-title">Table</h2>
+				<article> 
+					<div class="division"> 
+						<table> 
+							<colgrop> 
+								<col width="5%">
+								<col width="15%">
+								<col width="*">
+								<col width="20%">
+								<col width="10%">
+							</colgrop>
+							<thead> 
+								<tr>
+									<th><input type="checkbox" id=""></th>
+									<th>Th02</th>
+									<th>Th03</th>
+									<th>Th04</th>
+									<th>Th05</th>
+								</tr>
+							</thead>
+							<tbody> 
+								<tr>
+									<td><input type="checkbox" id=""></td>
+									<td>Td02</td>
+									<td>Td03</td>
+									<td>Td04</td>
+									<td>Td05</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id=""></td>
+									<td>Td02</td>
+									<td>Td03</td>
+									<td>Td04</td>
+									<td>Td05</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id=""></td>
+									<td>Td02</td>
+									<td>Td03</td>
+									<td>Td04</td>
+									<td>Td05</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id=""></td>
+									<td>Td02</td>
+									<td>Td03</td>
+									<td>Td04</td>
+									<td>Td05</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id=""></td>
+									<td>Td02</td>
+									<td>Td03</td>
+									<td>Td04</td>
+									<td>Td05</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+			</section>
+
+			<section> 
+				<h2 class="ui-title">Tab</h2>
+				<p class="ui-text02">tab01, tab02 스타일 2개로 나눠져 있으며 .flex를 추가하여 일정한 간격으로 사용할 수도 있습니다.<br>선택되어진 탭메뉴의 li에 active 클래스 추가</p>
+				<article> 
+					<div class="division">
+						<strong class="ui-title02">.tab01</strong>
+						<ul class="tab01"> 
+							<li class="active"> 
+								<button type="button" class="tab-menu">TAB MENU01<span>(47)</span></button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">MENU02</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENUTABMENU</button>
+							</li>
+						</ul> 
+					</div>
+					<div class="division">
+						<strong class="ui-title02">.tab01.flex</strong>
+						<ul class="tab01 flex"> 
+							<li class="active"> 
+								<button type="button" class="tab-menu">TAB MENU01<span>(47)</span></button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">MENU02</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENU</button>
+							</li>
+						</ul> 
+					</div>
+					<hr>
+					<div class="division">
+						<strong class="ui-title02">.tab02</strong>
+						<ul class="tab02"> 
+							<li class="active"> 
+								<button type="button" class="tab-menu">TAB MENU01</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">MENU02</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENU02TABMENU</button>
+							</li>
+						</ul> 
+					</div>
+					<div class="division">
+						<strong class="ui-title02">.tab02.flex</strong>
+						<ul class="tab02 flex"> 
+							<li class="active"> 
+								<button type="button" class="tab-menu">TAB MENU01</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">MENU02</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENUTABMENU</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENUTABMENU</button>
+							</li>
+							<li> 
+								<button type="button" class="tab-menu">TABMENU</button>
+							</li>
+						</ul> 
+					</div>
+				</article>
+			</section>
+
+			<section> 
+				<h2 class="ui-title">POPUP</h2>
+				<p class="ui-text">간단한 내용 / 간단한 뷰페이지 등 이용 가능<br>실제 사용할 땐 popup-wrap 감싸서 사용</p>
+				<article> 
+					<div class="division"> 
+						<strong class="ui-title02">.popup : 내용만</strong>
+						<div class="popup" style="position: static; transform: translate(0); "> 
+							<div class="popup-body">삭제하시면 복구할 수 없습니다.<br> 정말 삭제하시겠습니까?</div>
+							<div class="popup-bottom"> 
+								<button type="button">취소</button>
+								<button type="button" class="bg-main">확인</button>
+							</div>
+						</div>
+						<hr>
+						<div class="popup" style="position: static; transform: translate(0); "> 
+							<div class="popup-body">오류가 발생하였습니다.<br> 관리자에게 문의하세요.</div>
+							<div class="popup-bottom"> 
+								<button type="button" class="bg-main">닫기</button>
+							</div>
+						</div>
+
+					</div>
+					
+					<hr>
+
+					<div class="division"> 
+						<strong class="ui-title02">.popup : 타이틀 + 내용</strong>
+						<div class="popup" style="position: static; transform: translate(0); "> 
+							<div class="popup-header">
+								<h3>Popup Title</h3>
+								<button type="button" class="popup-close"><span class="visuallyhidden">팝업 닫기</span></button>
+							</div>
+							<div class="popup-body">삭제하시면 복구할 수 없습니다. 삭제하시겠습니까?</div>
+							<div class="popup-bottom"> 
+								<button type="button">취소</button>
+								<button type="button" class="bg-main">확인</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="division"> 
+						<strong class="ui-title02">.popup.big : 큰 버전 타이틀 + 내용</strong>
+						<div class="popup big" style="position: static; transform: translate(0); "> 
+							<div class="popup-header">
+								<h3>Popup Title</h3>
+								<button type="button" class="popup-close"><span class="visuallyhidden">팝업 닫기</span></button>
+							</div>
+							<div class="popup-body">내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용</div>
+							<div class="popup-bottom"> 
+								<button type="button">취소</button>
+								<button type="button" class="bg-main">확인</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="division"> 
+						<strong class="ui-title02">.popup - 활용 소스</strong>
+						<button type="button" class="bg-main btn-round open-popup">popup open</button>
+						<div class="popup-wrap">
+							<div class="popup"> 
+							<div class="popup-header">
+								<h3>Popup Title</h3>
+								<button type="button" class="popup-close"><span class="visuallyhidden">팝업 닫기</span></button>
+							</div>
+							<div class="popup-body">삭제하시면 복구할 수 없습니다. 삭제하시겠습니까?</div>
+							<div class="popup-bottom"> 
+								<button type="button">취소</button>
+								<button type="button" class="bg-main">확인</button>
+							</div>
+						</div>
+						</div>
+					</div>
+
+				</article>
+			</section>
+
+			<section> 
+				<h2 class="ui-title">DATEPICKER</h2>
+				<p class="ui-text">데이트피커</p>
+				<article> 
+					<div class="division"> 
+						<strong class="ui-title02">.datepicker</strong>
+						<input type="text" class="input-datepicker" readonly>
+					</div>
+
+				</article>
+			</section>
+
+			<section> 
+				<h2 class="ui-title">IMAGE</h2>
+				<p class="ui-text">상품 이미지 업로드나 첨부파일 이미지 업로드 등에 사용할 수 있음</p>
+				<article> 
+					<div class="division"> 
+						<strong class="ui-title02">.image-wrap</strong>
+						<div class="image-wrap"> 
+							<button type="button" class="image-upload"><span>image upload</span></button>
+						</div>
+					</div>
+					<div class="division">
+						<strong class="ui-title02">.image-wrap 이미지 올렸을 때</strong>
+						<div class="image-wrap"> 
+							<img src="../AppData/images/sample/karina.jpg">
+							<div class="btn-group"> 
+								<button type="button">수정</button>
+								<button type="button">삭제</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="division">
+						<strong class="ui-title02">.image-list 여러장</strong>
+						<ul class="image-list">
+							<li> 
+								<div class="image-wrap"> 
+									<button type="button" class="image-upload"><span>image upload</span></button>
+								</div>
+							</li>
+							<li>
+								<div class="image-wrap"> 
+									<img src="../AppData/images/sample/karina.jpg">
+									<div class="btn-group"> 
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="image-wrap"> 
+									<img src="../AppData/images/sample/karina.jpg">
+									<div class="btn-group"> 
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="image-wrap"> 
+									<img src="../AppData/images/sample/karina.jpg">
+									<div class="btn-group"> 
+										<button type="button">수정</button>
+										<button type="button">삭제</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</article>
+			</section>
 
 
 		</div>
