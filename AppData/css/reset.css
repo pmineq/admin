@@ -58,7 +58,7 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #444 !important;
 }
 
-input {margin: 0; -webkit-border-radius: 0; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; font-weight: 400; vertical-align: middle; }
+input {margin: 0; -webkit-border-radius: 0; box-sizing: border-box; outline: none; font-weight: 400; vertical-align: middle; }
 
 input:focus { }
 
