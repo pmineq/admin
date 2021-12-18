@@ -14,7 +14,7 @@ html, body {width: 100%; height: 100%; font-family: 'Roboto','NotoSansKR', Apple
 h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; }
 ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 
-.wrapper {width: 100%; min-height: 100%; }
+.wrapper {width: 100%; min-height: 100%; overflow: hidden; }
 .noto {font-family: 'NotoSansKR', Apple SD Gothic Neo, 'Microsoft Yahei', 'Microsoft MingLiU', Arial, 돋움, dotum, sans-serif; }
 
 /* ===================================================
