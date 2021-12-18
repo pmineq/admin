@@ -139,7 +139,7 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 /* ===================================================
 	Contents
 ====================================================*/
-.contents {position: relative; width: 100%; height: 100%; padding: 88px 24px 24px 34px; box-sizing: border-box; }
+.contents {position: relative; width: 100%; height: 100%; padding: 88px 24px 24px 34px; box-sizing: border-box; overflow: hidden; }
 
 
 
