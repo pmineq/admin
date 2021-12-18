@@ -66,7 +66,7 @@ button.small {height: 30px; padding: 0 16px; line-height: 28px; font-size: 0.8em
 /* =======================================================
    Pagenation 페이지네이션
 ========================================================*/
-.pagination-wrap {position: relative; width: 100%; box-sizing: border-box; }
+.pagination-wrap {position: relative; width: 100%; margin: 30px 0 10px; box-sizing: border-box; }
 .pagination-wrap .btn-load {width: 100%; max-width: 300px; height: 40px; padding: 0 20px; line-height: 38px; background-color: #fff; border: 1px solid #999; border-radius: 0.25rem; color: #999; font-size: 0.9rem; color: #777; }
 
 
@@ -126,7 +126,7 @@ button.small {height: 30px; padding: 0 16px; line-height: 28px; font-size: 0.8em
 .guide:before {content:"?"; position: absolute; top: 0; left: 0; width: 100%; height: 100%; line-height: 22px; font-size: 12px; color: #666; }
 
 .guide-wrap {display: none; position: absolute; top: calc(100% - 10px); left: calc(100% - 24px); padding-top: 10px; }
-.guide-box {width: 200px; padding: 15px 10px; border: 1px solid #eee; border-radius: 5px; box-sizing: border-box; background-color: #fff; font-size: 13px; font-weight: 400; color: #444; line-height: normal; }
+.guide-box {width: 280px; padding: 15px 10px; border: 1px solid #eee; border-radius: 5px; box-sizing: border-box; background-color: #fff; font-size: 13px; font-weight: 400; color: #444; line-height: normal; }
 
 
 .page-header {position: relative; display: block; margin-bottom: 24px; }
@@ -205,8 +205,11 @@ input.full,
 input.half,
 .input-text.half {width: 50%; }
 
+.datepicker-wrap {display: block; width: 100%; }
+.datepicker-wrap:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
 
 .input-datepicker {padding-left: 37px; background-image: url("../images/common/icon_date.png"); background-repeat: no-repeat; background-position: left 10px center; background-size: auto 16px; }
+.swing {display: inline-block; margin: 0 5px; }
 
 /* 데이트피커 */
 .ui-widget {padding: 15px 10px; font-family: 'Roboto','NotoSansKR', Apple SD Gothic Neo, 'Microsoft Yahei', 'Microsoft MingLiU', Arial, 돋움, dotum, sans-serif; }
@@ -232,7 +235,8 @@ input.half,
 .ui-datepicker .ui-datepicker-prev {top: 4px; left: 10px; background-image: url("../images/common/date_prev.png"); background-repeat:no-repeat; background-position: center center; }
 .ui-datepicker .ui-datepicker-next {top: 4px; right: 10px; background-image: url("../images/common/date_next.png"); background-repeat:no-repeat; background-position: center center; }
 
-
+.datepicker-wrap input {float: left; width: 200px; }
+.datepicker-wrap .swing {float: left; width: 10px; line-height: 35px; }
 
 
 
@@ -275,8 +279,6 @@ select.half,
 .form-item + .form-item {margin-top: 5%; }
 
 .form-wrap:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
-.form-wrap .form-item {float: left; width: 48%; margin: 2% 1% 0; }
-
 
 
 
@@ -338,7 +340,12 @@ table tr:first-child {border-top: 1px solid #ccc; }
 table tr:last-child {border-color: #ccc; }
 
 
-
+/* table-header */
+.table-header {margin-bottom: 20px; }
+.table-header:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.table-header p {float: left; font-weight: 500; font-size: 16px; line-height: 40px; }
+.table-header p em {font-size: 14px; color: #0080c7; }
+.table-header select {float: right; }
 
 
 /* ===================================================
@@ -379,10 +386,10 @@ table tr:last-child {border-color: #ccc; }
 /* ===================================================
 	Popup
 ====================================================*/
-.popup-wrap {display: none; position: fixed; top: 0; right: 0; width: calc(100% - 230px); height: 100%; background-color: rgba(0, 0, 0, 0.1); }
+.popup-wrap {display: none; position: fixed; top: 0; right: 0; width: calc(100% - 230px); height: 100%; background-color: rgba(0, 0, 0, 0.1); z-index: 5; }
 
 .popup {position: absolute; top: 50%; left: 50%; width: 500px; border-radius: 5px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); background-color: #fff; transform: translate(-50%, -50%); }
-.popup-header {position: relative; padding: 10px 20px 10px; border: 1px solid #eee; box-sizing: border-box; }
+.popup-header {position: relative; padding: 10px 10px 10px 20px; border: 1px solid #eee; box-sizing: border-box; }
 .popup-header:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
 .popup-header h3 {float: left; font-size: 18px; font-weight: 700; line-height: 30px; }
 .popup-close {position: relative; float: right; width: 30px; min-width: auto; height: 30px; border: 0; padding: 0;  }
@@ -398,6 +405,43 @@ table tr:last-child {border-color: #ccc; }
 
 .popup.big {width: 600px; }
 .popup.big .popup-body {min-height: 300px; max-height: 400px; }
+
+
+/* popup alarm */
+.alarm-wrap {position: relative; float: left; }
+#popup_alarm {display: none; position: absolute; top: 60px; right: 0; width: 280px; z-index: 5; transform: translate(-100%, 0); }
+#popup_alarm .popup-body {padding: 10px 15px; -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+#popup_alarm .popup-body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+
+.alarm-list {}
+.alarm-list li {width: 100%; }
+.alarm-list li a {display: block; width: 100%;padding: 10px 0; box-sizing: border-box; }
+
+.alarm-list li + li {border-top: 1px solid #eee; }
+.alarm-list li .date {display: block; margin-bottom: 2px; font-size: 12px; color: #888; }
+.alarm-list li .text {display: block; font-size: 13px; font-weight: 400; color: #444; }
+
+
+.header-user-wrap {position: relative; }
+.user-popup {display: none; position: absolute; top: 60px; right: 0; width: 145px; padding: 10px 15px; box-sizing: border-box; border-radius: 5px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); background-color: #fff; }
+
+.user-popup .user {padding: 5px 0 10px; border-bottom: 1px solid #eee; }
+.user-popup .user span {display: block; font-size: 12px; color: #888; }
+.user-popup .user p {font-size: 14px; font-weight: 500; color: #444; }
+
+.user-popup li {width: 100%; }
+.user-popup li button {width: 100%; height: auto; padding: 14px 0 14px 24px; box-sizing: border-box; line-height: normal; font-size: 13px; color: #666; text-align: left; }
+
+
+.user-popup li .logout {background-image: url("../images/common/header_logout.png"); background-repeat: no-repeat; background-position: left center; background-size: auto 16px; font-size: 13px; }
+.user-popup li .logout:hover {background-image: url("../images/common/header_logout_on.png"); color: #0080c7; }
+
+
 
 
 /* ===================================================
@@ -428,11 +472,59 @@ table tr:last-child {border-color: #ccc; }
 	Search
 ====================================================*/
 article {width: 100%; margin: 20px 0; padding: 24px 20px; border: 1px solid #eee; border-radius: 3px; box-sizing: border-box; background-color: #fff; }
-.search-wrap .btn-search {display: block; margin: 30px auto 0; }
+
+/* search */
+
+.search-wrap {display: flex; align-items: center; }
+.search-wrap .form-wrap {width: 80%; }
+.search-wrap .btn-group {width: 15%; margin-left: 5%; }
+.search-wrap .btn-group .btn,
+.search-wrap .btn-group button {width: 100%; }
+.search-wrap .btn-group .btn + .btn,
+.search-wrap .btn-group .btn + button,
+.search-wrap .btn-group button + .btn,
+.search-wrap .btn-group button + button {margin: 3% 0 0; }
+
+.search-wrap .form-item {float: left; width: 45%; margin: 2% 4% 0 1%; }
+.search-wrap .form-item:nth-of-type(1),
+.search-wrap .form-item:nth-of-type(2) {margin-top: 0; }
+.search-wrap .form-item.full {width: 100%; }
+
+.search-wrap input,
+.search-wrap .input-text {height: 35px; line-height: 33px; }
 
 
 
 
 
+/* ===================================================
+	반응형
+====================================================*/
+
+/* 1120px 이하 */
+@media (max-width: 1120px){
+	.search-wrap {flex-direction: column; }
+	.search-wrap .form-item {width: 100%; margin: 0; }
+	.search-wrap .form-item + .form-item {margin-top: 4%; }
+	.search-wrap .form-wrap {width: 100%; }
+	.search-wrap .btn-group {width: 100%; margin: 5% 0 0; }
+	.search-wrap .btn-group .btn,
+	.search-wrap .btn-group button {width: 100%; }
+
+
+}
+
+
+/* 768px 이하 */
+@media (max-width: 768px){
+	.form-item {flex-direction: column; align-items: flex-start; }
+	.input-title {min-width: 100%; text-align: left; }
+
+	.datepicker-wrap input {width: calc(50% - 10px); }
+
+	.page-header .title {font-size: 24px; }
+	.breadcrumb li {font-size: 11px; }
+
+}
 
 

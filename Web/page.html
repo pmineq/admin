@@ -66,17 +66,63 @@
 
 	<!-- S: header -->
 	<header id="header" class="header">
+		<button type="button" class="btn-nav"><em class="visuallyhidden">메뉴 여닫기</em><span></span></button>
 		<h1 class="logo">
 			<a href="components.html" alt="logo">
 				<img src="../AppData/images/common/logo.png" alt="logo">
 			</a>
 		</h1>
 		<div class="header-util">
-			<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+			<div class="alarm-wrap">
+				<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+
+				<div class="popup" id="popup_alarm">
+					<div class="popup-body"> 
+						<ul class="alarm-list"> 
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="header-right"> 
 				<ul>
-					<li><button type="button" class="header-user"><span>mine_pp</span></button></li>
-					<li><button type="button" class="header-logout">Logout</button></li>
+					<li class="header-user-wrap">
+						<button type="button" class="header-user"><span>mine_pp</span></button>
+						<div class="user-popup">
+							<div class="user">
+								<span>mine_pp</span>
+								<p>Min Hye Park</p>
+							</div>
+							<ul>
+								<li><button type="button">Profile</button></li> 
+								<li><button type="button">Lock</button></li> 
+								<li><button type="button" class="logout">Logout</button></li>
+							</ul>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -84,7 +130,8 @@
 	<!-- E: header -->
 
 
-	<nav class="nav-wrap">
+	<button type="button" class="nav-close">메뉴 닫기</button>
+	<nav class="nav-wrap">		
 		<ul class="nav">
 			<li class="depth">
 				<button class="nav-title">Menu01</button>
@@ -137,6 +184,11 @@
 						</div>
 					</div> 
 				</strong>
+				<ul class="breadcrumb">
+					<li><a href="#">depth01</a></li>
+					<li><a href="#">depth02</a></li>
+					<li class="active"><a href="#">depth03</a></li>
+				</ul>
 			</div>
 			<article class="search-wrap"> 
 				<div class="form-wrap"> 
@@ -156,71 +208,151 @@
 						<label for="input02" class="input-title">인풋 라벨 타이틀</label>
 						<input type="text" class="full" id="input02">
 					</div>
-					<div class="form-item">
+					<div class="form-item full">
 						<label for="input01" class="input-title">input label</label>
-						<input type="text" class="input-datepicker" id="input01"> ~ <input type="text" class="input-datepicker" id="input01">
+						<div class="datepicker-wrap">
+							<input type="text" class="input-datepicker" id="input01"> <span class="swing">~</span> <input type="text" class="input-datepicker" id="input01">
+						</div>
 					</div>
 				</div>
-				<button type="button" class="half bg-main btn-round btn-search">조회</button>
+				<div class="btn-group">
+					<button type="button" class="bg-main btn-round btn-search">조회</button>
+					<button type="button" class="btn-round btn-search">초기화</button>
+				</div>
 			</article>
 
-					<article> 
-			<table> 
-				<colgroup><col width="5%">
-					<col width="15%">
-					<col width="*">
-					<col width="20%">
-					<col width="10%">
-				</colgroup>
-				<thead> 
-					<tr>
-						<th><input type="checkbox" id=""></th>
-						<th>Th02</th>
-						<th>Th03</th>
-						<th>Th04</th>
-						<th>Th05</th>
-					</tr>
-				</thead>
-				<tbody> 
-					<tr>
-						<td><input type="checkbox" id=""></td>
-						<td>Td02</td>
-						<td>Td03</td>
-						<td>Td04</td>
-						<td>Td05</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" id=""></td>
-						<td>Td02</td>
-						<td>Td03</td>
-						<td>Td04</td>
-						<td>Td05</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" id=""></td>
-						<td>Td02</td>
-						<td>Td03</td>
-						<td>Td04</td>
-						<td>Td05</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" id=""></td>
-						<td>Td02</td>
-						<td>Td03</td>
-						<td>Td04</td>
-						<td>Td05</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" id=""></td>
-						<td>Td02</td>
-						<td>Td03</td>
-						<td>Td04</td>
-						<td>Td05</td>
-					</tr>
-				</tbody>
-			</table>
-		</article>
-
+			<article> 
+				<div class="table-header"> 
+					<p>검색결과 <em>(<span>9,999</span>)</em></p>
+					<select> 
+						<option>10개 보기</option>
+						<option>20개 보기</option>
+						<option>30개 보기</option>
+						<option>40개 보기</option>
+						<option>50개 보기</option>
+					</select>
+				</div>
+				<table> 
+					<colgroup><col width="5%">
+						<col width="15%">
+						<col width="*">
+						<col width="20%">
+						<col width="10%">
+					</colgroup>
+					<thead> 
+						<tr>
+							<th><input type="checkbox" id=""></th>
+							<th>Th02</th>
+							<th>Th03</th>
+							<th>Th04</th>
+							<th>Th05</th>
+						</tr>
+					</thead>
+					<tbody> 
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id=""></td>
+							<td>Td02</td>
+							<td>Td03</td>
+							<td>Td04</td>
+							<td>Td05</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="pagination-wrap"> 
+					<ul class="pagination"> 
+						<li>
+							<span class="page-pprev"><span class="visuallyhidden">처음으로 이동</span></span>
+						</li>
+						<li>
+							<span class="page-prev"><span class="visuallyhidden">이전페이지 이동</span></span>
+						</li>
+						<li class="current"> 
+							<span>1</span>
+						</li>
+						<li> 
+							<span>2</span>
+						</li>
+						<li> 
+							<span>3</span>
+						</li>
+						<li> 
+							<span>4</span>
+						</li>
+						<li> 
+							<span>5</span>
+						</li>
+						<li>
+							<span class="page-next"><span class="visuallyhidden">다음페이지 이동</span></span>
+						</li>
+						<li>
+							<span class="page-nnext"><span class="visuallyhidden">마지막으로 이동</span></span>
+						</li>
+					</ul>
+				</div>
+			</article>
 
 
 

@@ -67,23 +67,68 @@
 
 	<!-- S: header -->
 	<header id="header" class="header">
+		<button type="button" class="btn-nav"><em class="visuallyhidden">메뉴 여닫기</em><span></span><span></span><span></span></button>
 		<h1 class="logo">
 			<a href="components.html" alt="logo">
 				<img src="../AppData/images/common/logo.png" alt="logo">
 			</a>
 		</h1>
 		<div class="header-util">
-			<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+			<div class="alarm-wrap">
+				<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+
+				<div class="popup" id="popup_alarm">
+					<div class="popup-body"> 
+						<ul class="alarm-list"> 
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="header-right"> 
 				<ul>
-					<li><button type="button" class="header-user"><span>mine_pp</span></button></li>
-					<li><button type="button" class="header-logout">Logout</button></li>
+					<li class="header-user-wrap">
+						<button type="button" class="header-user"><span>mine_pp</span></button>
+						<div class="user-popup">
+							<div class="user">
+								<span>mine_pp</span>
+								<p>Min Hye Park</p>
+							</div>
+							<ul>
+								<li><button type="button">Profile</button></li> 
+								<li><button type="button">Lock</button></li> 
+								<li><button type="button" class="logout">Logout</button></li>
+							</ul>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</header>
 	<!-- E: header -->
-
 
 	<nav class="nav-wrap">
 		<ul class="nav">
@@ -208,9 +253,9 @@
 						<div class="page-header"> 
 							<h2 class="title">Page Title</h2>
 							<ul class="breadcrumb">
-								<li>depth01</li>
-								<li>depth02</li>
-								<li class="active">depth03</li>
+								<li><a href="#">depth01</a></li>
+								<li><a href="#">depth02</a></li>
+								<li class="active"><a href="#">depth03</a></li>
 							</ul>
 						</div>
 					</div>
