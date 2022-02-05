@@ -86,7 +86,7 @@ $(window).on('resize', function(){
 
 function responsive(){
 	var windowW = $(window).width();
-	if(windowW < 1120){
+	if(windowW < 768){
 		$('.nav-wrap, .nav-close').addClass('close');
 	} else {
 		$('.nav-wrap, .nav-close').removeClass('close');
