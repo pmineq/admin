@@ -75,12 +75,7 @@ $(document).ready(function(){
 		}
 	});
 
-	var windowW = $(window).width();
-	if(windowW < 1120){
-		$('.nav-wrap, .nav-close').addClass('close');
-	} else {
-		$('.nav-wrap, .nav-close').removeClass('close');
-	}
+
 	responsive();
 
 });
@@ -91,18 +86,9 @@ $(window).on('resize', function(){
 
 function responsive(){
 	var windowW = $(window).width();
-
 	if(windowW < 1120){
-		if($('.nav-wrap').hasClass('close')){
-			$('.nav-wrap, .nav-close').addClass('close');
-		} else {
-			$('.nav-wrap, .nav-close').removeClass('close');
-		}
+		$('.nav-wrap, .nav-close').addClass('close');
 	} else {
-		if($('.nav-wrap').hasClass('close')){
-			$('.nav-wrap, .nav-close').addClass('close');
-		} else {
-			$('.nav-wrap, .nav-close').removeClass('close');
-		}
+		$('.nav-wrap, .nav-close').removeClass('close');
 	}
 }

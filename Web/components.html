@@ -726,62 +726,64 @@
 			<section> 
 				<h2 class="ui-title">Table</h2>
 				<article> 
-					<div class="division"> 
-						<table> 
-							<colgrop> 
-								<col width="5%">
-								<col width="15%">
-								<col width="*">
-								<col width="20%">
-								<col width="10%">
-							</colgrop>
-							<thead> 
-								<tr>
-									<th><input type="checkbox" id=""></th>
-									<th>Th02</th>
-									<th>Th03</th>
-									<th>Th04</th>
-									<th>Th05</th>
-								</tr>
-							</thead>
-							<tbody> 
-								<tr>
-									<td><input type="checkbox" id=""></td>
-									<td>Td02</td>
-									<td>Td03</td>
-									<td>Td04</td>
-									<td>Td05</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" id=""></td>
-									<td>Td02</td>
-									<td>Td03</td>
-									<td>Td04</td>
-									<td>Td05</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" id=""></td>
-									<td>Td02</td>
-									<td>Td03</td>
-									<td>Td04</td>
-									<td>Td05</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" id=""></td>
-									<td>Td02</td>
-									<td>Td03</td>
-									<td>Td04</td>
-									<td>Td05</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" id=""></td>
-									<td>Td02</td>
-									<td>Td03</td>
-									<td>Td04</td>
-									<td>Td05</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="division">
+						<div class="table-default">
+							<table>
+								<colgrop>
+									<col width="5%">
+									<col width="15%">
+									<col width="*">
+									<col width="20%">
+									<col width="10%">
+								</colgrop>
+								<thead>
+									<tr>
+										<th><input type="checkbox" id=""></th>
+										<th>Th02</th>
+										<th>Th03</th>
+										<th>Th04</th>
+										<th>Th05</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" id=""></td>
+										<td>Td02</td>
+										<td>Td03</td>
+										<td>Td04</td>
+										<td>Td05</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""></td>
+										<td>Td02</td>
+										<td>Td03</td>
+										<td>Td04</td>
+										<td>Td05</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""></td>
+										<td>Td02</td>
+										<td>Td03</td>
+										<td>Td04</td>
+										<td>Td05</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""></td>
+										<td>Td02</td>
+										<td>Td03</td>
+										<td>Td04</td>
+										<td>Td05</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""></td>
+										<td>Td02</td>
+										<td>Td03</td>
+										<td>Td04</td>
+										<td>Td05</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</article>
 			</section>
@@ -858,20 +860,21 @@
 
 			<section> 
 				<h2 class="ui-title">POPUP</h2>
-				<p class="ui-text">간단한 내용 / 간단한 뷰페이지 등 이용 가능<br>실제 사용할 땐 popup-wrap 감싸서 사용</p>
+				<p class="ui-text">간단한 내용 / 간단한 뷰페이지 등 이용 가능<br>실제 사용할 땐 popup-wrap 감싸서 사용.</p>
+				<p class="ui-text">컨텐츠 내용 - text-left / text-center / text-right 로 정렬 변경 가능</p>
 				<article> 
 					<div class="division"> 
 						<strong class="ui-title02">.popup : 내용만</strong>
-						<div class="popup" style="position: static; transform: translate(0); "> 
-							<div class="popup-body">삭제하시면 복구할 수 없습니다.<br> 정말 삭제하시겠습니까?</div>
+						<div class="popup" style="position: static; width: 100%; transform: translate(0); ">
+							<div class="popup-body text-center">삭제하시면 복구할 수 없습니다.<br> 정말 삭제하시겠습니까?</div>
 							<div class="popup-bottom"> 
 								<button type="button">취소</button>
 								<button type="button" class="bg-main">확인</button>
 							</div>
 						</div>
 						<hr>
-						<div class="popup" style="position: static; transform: translate(0); "> 
-							<div class="popup-body">오류가 발생하였습니다.<br> 관리자에게 문의하세요.</div>
+						<div class="popup" style="position: static; width: 100%; transform: translate(0); ">
+							<div class="popup-body text-center">오류가 발생하였습니다.<br> 관리자에게 문의하세요.</div>
 							<div class="popup-bottom"> 
 								<button type="button" class="bg-main">닫기</button>
 							</div>
@@ -883,7 +886,7 @@
 
 					<div class="division"> 
 						<strong class="ui-title02">.popup : 타이틀 + 내용</strong>
-						<div class="popup" style="position: static; transform: translate(0); "> 
+						<div class="popup" style="position: static; width: 100%; transform: translate(0); ">
 							<div class="popup-header">
 								<h3>Popup Title</h3>
 								<button type="button" class="popup-close"><span class="visuallyhidden">팝업 닫기</span></button>
@@ -898,15 +901,15 @@
 
 					<div class="division"> 
 						<strong class="ui-title02">.popup.big : 큰 버전 타이틀 + 내용</strong>
-						<div class="popup big" style="position: static; transform: translate(0); "> 
+						<div class="popup big" style="position: static; width: 100%; transform: translate(0); ">
 							<div class="popup-header">
 								<h3>Popup Title</h3>
 								<button type="button" class="popup-close"><span class="visuallyhidden">팝업 닫기</span></button>
 							</div>
 							<div class="popup-body">내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용 내용내용 내용 내용</div>
 							<div class="popup-bottom"> 
-								<button type="button">취소</button>
-								<button type="button" class="bg-main">확인</button>
+								<button type="button">삭제</button>
+								<button type="button" class="bg-main">닫기</button>
 							</div>
 						</div>
 					</div>

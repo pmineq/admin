@@ -35,8 +35,8 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 .depth .nav-title:hover {border: 0; background-color: #f9f9f9; }
 .depth .nav-title:hover:after {top: 50%; left: auto; right: 20px; width: 8px; height: 2px; background-color: #888; }
 
-.active .nav-title {background-color: #eff7fb; font-weight: 500; color: #0080c7; }
-.active .nav-title:hover {background-color: #e1f4fd; }
+.active a.nav-title {background-color: #eff7fb; font-weight: 500; color: #0080c7; }
+.active a.nav-title:hover {background-color: #e1f4fd; }
 .depth.active .nav-title:after {background-color: #0080c7; }
 .depth.active .nav-title:before {content: none; }
 
@@ -70,7 +70,7 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 
 
 /* loading */
-.loading-wrap {display: none; position: fixed; bottom: 0; right: 0; width: calc(100% - 230px); height: calc(100vh - 64px); background-color: rgba(255, 255, 255, 0.5); z-index: 10; }
+.loading-wrap {display: none; position: fixed; bottom: 0; right: 0; width: 100%; height: calc(100vh - 64px); background-color: rgba(255, 255, 255, 0.5); z-index: 10; }
 .loading {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .loading:after {content: ""; position: absolute; top: calc(50% + 32px); left: 50%; display: block; width: 26px; height: 26px; border-radius: 999px; background-color: #fff; opacity: 1; transform: translate(-50%, -50%); }
 .loading .bar {display: block; position: absolute; top: 0; left: 50%; width: 3px; height: 32px; border-radius: 5px; background-color: #0080c7; opacity: 1; transform-origin: center bottom; animation: loading-bar 1.2s ease-in-out infinite; }
@@ -181,6 +181,16 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 
 /* 768px 이하 */
 @media (max-width: 768px){
+	/* 모바일 - 이미지 줄였을 때 화질 개선 */
+	img {
+	image-rendering: -moz-crisp-edges; /* Firefox */
+	image-rendering: -o-crisp-edges; /* Opera */
+	image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+	}
+
+
 	.container {width: 100%; padding: 0; }
 	.nav-wrap.close + .container {padding: 0; }
 	.nav-wrap {width: 100%; }
