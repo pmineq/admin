@@ -75,8 +75,21 @@ $(document).ready(function(){
 		}
 	});
 
-
 	responsive();
+
+//	$(document).on('click', '#ck_dark', function(){
+//		if($(this).prop('checked')){
+//			$('#wrapper').addClass('dark-mode');
+//		} else {
+//			$('#wrapper').removeClass('dark-mode');
+//		}
+//	});
+
+	if($('body').hasClass('dark')){
+		$('#ck_dark').prop("checked", true);
+	} else {
+		$('#ck_dark').prop("checked", false);
+	}
 
 });
 
@@ -86,9 +99,12 @@ $(window).on('resize', function(){
 
 function responsive(){
 	var windowW = $(window).width();
-	if(windowW < 768){
+	if(windowW < 769){
 		$('.nav-wrap, .nav-close').addClass('close');
 	} else {
 		$('.nav-wrap, .nav-close').removeClass('close');
 	}
 }
+
+
+

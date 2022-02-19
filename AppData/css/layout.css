@@ -7,8 +7,11 @@
 *    2021-11-21 작성
 *
 ====================================================*/
+:root {
+  color-scheme: light dark;
+}
 
-* {margin: 0; padding: 0; }
+* {margin: 0; padding: 0; background-color: inherit; }
 
 html, body {width: 100%; height: 100%; font-family: 'Roboto','NotoSansKR', Apple SD Gothic Neo, 'Microsoft Yahei', 'Microsoft MingLiU', Arial, 돋움, dotum, sans-serif; font-weight: 400; font-style: normal; font-stretch: normal; font-size: 14px; line-height: 1.43; color: #111; word-break: keep-all; word-wrap: break-word; white-space: normal; }
 h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; }
@@ -20,35 +23,35 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 /* ===================================================
 	Nav
 ====================================================*/
-.nav-wrap {position: fixed; top: 64px; left: 0; width: 230px; height: calc(100vh - 64px); padding: 12px 20px; box-shadow: 0px 5px 16px 3px rgba(141, 141, 141, 0.12); box-sizing: border-box; background-color: #fff; overflow: hidden; overflow-y: auto; z-index: 5; transition: all 0.3s; }
+.nav-wrap {position: fixed; top: 64px; left: 0; width: 230px; height: calc(100vh - 64px); padding: 12px 20px; box-shadow: 0px 5px 16px 3px rgba(141, 141, 141, 0.12); box-sizing: border-box; background-color: #fff; overflow: hidden; overflow-y: auto; z-index: 5; transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .logo {display: block; float: left; height: 30px; font-size: 20px; line-height: 30px; }
 .logo a {display: block; width: 100%; height: 100%; }
 .logo img {display: block; max-width: 100%; max-height: 100%; margin: 0 auto; }
+.logo .dark {display: none; }
 
 .nav {width: 100%; }
 .nav li {}
 .nav-title {display: inline-block; position: relative; width: 100%; height: auto; padding: 12px 12px; border: 0; border-radius: 3px; box-sizing: border-box; text-align: left; font-size: 15px; font-weight: 400; line-height: inherit; color: #666; }
 .nav-title:hover {background-color: #f9f9f9; }
 .depth .nav-title:after {content:""; position: absolute; top: 50%; right: 20px; width: 8px; height: 2px; background-color: #888; transform: translateY(-50%); }
-.depth .nav-title:before {content:""; position: absolute; top: 50%; right: 20px; width: 8px; height: 2px; background-color: #888; transform: translateY(-50%) rotate(90deg); }
 .depth .nav-title:hover {border: 0; background-color: #f9f9f9; }
 .depth .nav-title:hover:after {top: 50%; left: auto; right: 20px; width: 8px; height: 2px; background-color: #888; }
 
-.active a.nav-title {background-color: #eff7fb; font-weight: 500; color: #0080c7; }
-.active a.nav-title:hover {background-color: #e1f4fd; }
+.active a.nav-title {background-color: transparent; font-weight: 500; color: #0080c7; }
+a.nav-title:hover {background-color: transparent; color: #0080c7; }
 .depth.active .nav-title:after {background-color: #0080c7; }
-.depth.active .nav-title:before {content: none; }
+.depth.active .nav-title:before {content:""; position: absolute; top: 50%; right: 20px; width: 8px; height: 2px; background-color: #0080c7; transform: translateY(-50%) rotate(90deg); }
 
 
-.nav-category {display: none; width: 100%; padding: 8px 12px; box-sizing: border-box; font-size: 15px; font-weight: 500; color: #222; }
-.nav-category .category-menu {display: block; width: 100%; padding: 8px 8px; font-size: 14px; font-weight: 400; color: #666; }
+.nav-category {display: block; width: 100%; padding: 0 12px 8px; box-sizing: border-box; font-size: 15px; font-weight: 500; color: #222; }
+.nav-category .category-menu {display: block; width: 100%; padding: 8px 8px; font-size: 14px; font-weight: 400; color: #888; }
 .nav-category .category-menu:hover {color: #0080c7; }
-.active .nav-category {display: block; }
+.active .nav-category {display: none; }
 
-.nav-close {position: fixed; top: 50%; left: 230px; width: 24px; min-width: 24px; height: 80px; padding: 0; border: 1px solid #eee; border-left: 0; border-radius: 0; border-top-right-radius: 15px; border-bottom-right-radius: 15px; background-color: #fff; box-shadow: 6px 0px 8px 0px rgb(141 141 141 / 12%); text-indent: -9999px; z-index: 10; transform: translateY(-50%); transition: all 0.3s; }
+.nav-close {position: fixed; top: 50%; left: 230px; width: 24px; min-width: 24px; height: 80px; padding: 0; border: 1px solid #eee; border-left: 0; border-radius: 0; border-top-right-radius: 15px; border-bottom-right-radius: 15px; background-color: #fff; box-shadow: 6px 0px 8px 0px rgb(141 141 141 / 12%); text-indent: -9999px; z-index: 10; transform: translateY(-50%); transition: left 0.3s; }
 .nav-close:after {content:""; display: block; position: absolute; top: 50%; left: 50%; width: 2px; height: 8px; margin: -3px 0 0 -7px; background-color: #0080c7; transform: rotate(30deg) translate(-50%, -50%); }
-.nav-close:hover:after {content:""; display: block; position: absolute; top: 50%; left: 50%; width: 2px; height: 8px; background-color: #007bbf; }
+.nav-close:hover:after {content:""; display: block; position: absolute; top: 50%; left: 50%; width: 2px; height: 8px; background-color: #007bbf; mix-blend-mode: normal; }
 .nav-close:before {content:""; display: block; position: absolute; top: 50%; left: 50%; width: 2px; height: 8px; margin: 2px 0 0 -3px; background-color: #0080c7; transform: rotate(-30deg) translate(-50%, -50%); }
 .nav-close:hover:before {background-color: #007bbf; }
 
@@ -66,11 +69,11 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 /* ===================================================
 	Container
 ====================================================*/
-.container {position: relative; float: right; width: calc(100% - 230px); height: 100%; min-height: 100vh; margin-left: 230px; background-color: #f7f8f9; transition: all 0.3s; }
+.container {position: relative; float: right; width: calc(100% - 230px); height: 100%; min-height: 100vh; margin-left: 230px; background-color: #f7f8f9; transition: width 0.3s; }
 
 
 /* loading */
-.loading-wrap {display: none; position: fixed; bottom: 0; right: 0; width: 100%; height: calc(100vh - 64px); background-color: rgba(255, 255, 255, 0.5); z-index: 10; }
+.loading-wrap {display: none; position: fixed; bottom: 0; right: 0; width: 100%; height: calc(100vh - 64px); background-color: rgba(255, 255, 255, 0.5); z-index: 12; }
 .loading {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .loading:after {content: ""; position: absolute; top: calc(50% + 32px); left: 50%; display: block; width: 26px; height: 26px; border-radius: 999px; background-color: #fff; opacity: 1; transform: translate(-50%, -50%); }
 .loading .bar {display: block; position: absolute; top: 0; left: 50%; width: 3px; height: 32px; border-radius: 5px; background-color: #0080c7; opacity: 1; transform-origin: center bottom; animation: loading-bar 1.2s ease-in-out infinite; }
@@ -147,18 +150,16 @@ ul, ol, li, dl {list-style: none; padding: 0; margin: 0; }
 /* ===================================================
 	Sticky
 ====================================================*/
-.sticky-wrap {position: fixed; right: 5%; bottom: 5%; z-index: 10; }
-.sticky-top {display: none; width: 50px; height: 50px; background-color: #fff; border-radius: 5px; border: 1px solid #eee; padding: 0; text-align: center; }
+.sticky-wrap {position: fixed; right: 5%; bottom: 5%; background-color: transparent; z-index: 10; }
+.sticky-top {display: none; width: 50px; height: 50px; background-color: #fff; border-radius: 5px; border: 1px solid #eee; padding: 0; text-align: center; overflow: hidden; }
 .sticky-top:hover {background-color: #e1f4fd; }
 .sticky-top:hover:after {content: none; }
-.sticky-top span {display: block; position: relative; padding-top: 10px; font-size: 12px; color: #666; }
+.sticky-top span {display: block; position: relative; padding-top: 10px; font-size: 12px; color: #666; overflow: hidden; }
 .sticky-top span:after {content:""; display: block; position: absolute; top: 10px; left: calc(50% - 2px); width: 2px; height: 8px; background-color: #ccc; border-radius: 999px; transform: translateX(-50%) rotate(45deg); }
 .sticky-top span:before {content:""; display: block; position: absolute; top: 10px; left: calc(50% + 2px); width: 2px; height: 8px; background-color: #ccc; border-radius: 999px; transform: translateX(-50%) rotate(-45deg); }
 .sticky-top:hover span {color: #0080c7; }
 .sticky-top:hover span:after,
 .sticky-top:hover span:before {background-color: #0080c7; }
-
-
 
 
 

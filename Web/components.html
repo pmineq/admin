@@ -5,6 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta property="og:image" content="../AppData/images/common/share.png">
+  <meta property="me2:image" content="../AppData/images/common/share.png">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../AppData/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../AppData/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../AppData/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../AppData/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../AppData/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../AppData/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../AppData/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../AppData/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../AppData/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../AppData/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../AppData/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../AppData/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../AppData/images/favicon/favicon-16x16.png">
 
   <link rel="stylesheet" href="../AppData/css/fonts.css">
   <link rel="stylesheet" href="../AppData/css/normalize.css">
@@ -12,6 +28,7 @@
   <link rel="stylesheet" href="../AppData/css/jquery-ui.css">
   <link rel="stylesheet" href="../AppData/css/layout.css">
   <link rel="stylesheet" href="../AppData/css/components.css">
+  <link rel="stylesheet" href="../AppData/css/dark.css">
 
   <script src="../AppData/js/jquery.js"></script>
   <script src="../AppData/js/jquery-ui.js"></script>
@@ -33,8 +50,14 @@
 	.ui-text {margin: 36px 0 16px; font-size: 14px; font-weight: 400; color: #444; }
 
 	article {width: 100%; margin: 20px 0; padding: 24px 20px; border: 1px solid #eee; border-radius: 3px; box-sizing: border-box; background-color: #fff; }
+	.dark article {background-color: #222; border-color: #333; }
+	.dark .ui-title {color: #fff; border-color: #888; }
+	.dark .ui-title02,
+	.dark .ui-text {color: #ddd; }
+
 	.division {margin: 20px 0; }
 	.division > p {color: #666; }
+	.dark .division > p {color: #bbb; }
 
 </style>
 
@@ -71,6 +94,7 @@
 		<h1 class="logo">
 			<a href="components.html" alt="logo">
 				<img src="../AppData/images/common/logo.png" alt="logo">
+				<img src="../AppData/images/dark/logo.png" alt="logo" class="dark">
 			</a>
 		</h1>
 		<div class="header-util">
@@ -118,9 +142,18 @@
 								<p>Min Hye Park</p>
 							</div>
 							<ul>
-								<li><button type="button">Profile</button></li> 
-								<li><button type="button">Lock</button></li> 
+								<li><button type="button" class="profile">Profile</button></li> 
+								<li><button type="button" class="lock">Lock</button></li> 
 								<li><button type="button" class="logout">Logout</button></li>
+								<li>
+									<div class="dark-switch"> 
+										<input type="checkbox" id="ck_dark" class="check-dark">
+										<label for="ck_dark"> 
+											<span>Light</span>
+											<span>Dark</span>
+										</label>
+									</div>
+								</li>
 							</ul>
 						</div>
 					</li>
@@ -1016,5 +1049,7 @@
 </div>
 
 </body>
+<script src="../AppData/js/dark.js"></script>
+
 </html>
 
