@@ -77,14 +77,6 @@ $(document).ready(function(){
 
 	responsive();
 
-//	$(document).on('click', '#ck_dark', function(){
-//		if($(this).prop('checked')){
-//			$('#wrapper').addClass('dark-mode');
-//		} else {
-//			$('#wrapper').removeClass('dark-mode');
-//		}
-//	});
-
 	if($('body').hasClass('dark')){
 		$('#ck_dark').prop("checked", true);
 	} else {

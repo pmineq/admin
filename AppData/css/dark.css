@@ -174,3 +174,12 @@
 
 
 
+/* ===================================================
+	login
+====================================================*/
+.dark .login-wrap {background-color: #222; box-shadow: 0px 3px 20px 0px #202020; }
+.dark .login-form-area label {color: #666; }
+.dark .login-form-area input:not(:placeholder-shown) + label {color: rgb(210, 210, 210, 0.5); }
+
+
+
