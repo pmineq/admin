@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+
+/* =================================
+*		리셋 설정
+*		2021-04-13
+================================== */
+em {font-style: normal; }
+
+
+
+/* 리스트 */
+ul, ol, li, dl, dt, dd {list-style: none; }
+
+
+
+
+
+/* 표(테이블) */
+table {width: 100%; padding: 0; margin: 0; border-collapse: collapse; border-spacing: 0; table-layout: fixed; word-break: break-all; background-image: none; }
+
+
+
+
+/* 버튼 */
+button,
+.btn {display: inline-block; background-color: transparent; border: 0; -webkit-border-radius: 0; border-radius: 0; box-sizing: border-box; outline: none; text-decoration: none; font-style: normal; color: inherit; letter-spacing: 0.25px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+
+
+/* input */
+input::-ms-clear {display: none; width : 0; height: 0;}
+input::-ms-reveal {display: none; width : 0; height: 0;}
+input::-webkit-search-decoration {display: none; }
+input::-webkit-search-cancel-button {display: none; }
+input::-webkit-search-results-button {display: none; }
+input::-webkit-search-results-decoration {display: none; }
+
+input:-internal-autofill-previewed {background-color: #fff !important; color: #444 !important; }
+input:-internal-autofill-selected {background-color: #fff !important; color: #444 !important; }
+textarea:-internal-autofill-previewed {background-color: #fff !important; color: #444 !important; }
+textarea:-internal-autofill-selected {background-color: #fff !important; color: #444 !important; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: #444 !important;
+}
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: #444 !important;
+}
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: #444 !important;
+}
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  -webkit-text-fill-color: #444 !important;
+}
+
+input {margin: 0; -webkit-border-radius: 0; box-sizing: border-box; outline: none; font-weight: 400; vertical-align: middle; }
+
+input:focus { }
+
+
+
+/* select */
+select,
+.select {margin: 0; padding: 0 25px 0 10px; background-color: #fff; background-image: url("../images/button/select.png"); background-repeat: no-repeat; background-position: right 10px center; box-sizing: border-box; -webkit-border-radius: 0; vertical-align: middle; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; font-weight: 400; vertical-align: middle; }
+
+select::-ms-expand {display: none; }
+select:focus {outline: none; }
+select:-internal-autofill-previewed {background-color: #fff !important; color: #444 !important; }
+select:-internal-autofill-selected {background-color: #fff !important; color: #444 !important; }
+
+
+
+/* textarea */
+textarea,
+.textarea {-webkit-border-radius: 0;  box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; resize: none; vertical-align: top; }
+
+textarea.resize,
+.textarea.resize {resize: vertical; }
+
+textarea:focus,
+.textarea:focus {outline: 0 transparent !important; }
+
+
+
+/* pre */
+pre,
+.prebox {display: block; padding: 0; margin: 0; border: none; box-sizing: border-box; border-radius: 0; background: transparent; font-family: inherit; font-size: inherit; font-weight: normal; line-height: inherit; letter-spacing: inherit; text-align: left; word-break: normal;  word-wrap: break-word; white-space: pre-line; -ms-appearance: none; -webkit-appearance: none; appearance: none; -ms-overflow-style: none; }
+
+pre::-webkit-scrollbar,
+pre::-ms-scrollbar,
+.prebox::-webkit-scrollbar,
+.prebox::-ms-scrollbar {appearance: none; }
+
+
+/* bxSlide */
+.bx-wrapper {margin-bottom: 0 !important; background: none; border: 0; box-shadow: none; }
+.bx-wrapper .bx-loading {background: none; }
+.bx-wrapper img {width: 100%; }
+.bx-controls {width: 100%; display: block; }
+.bx-controls .bx-pager {left: 50%; bottom: 0.5rem; display: block; width: auto; min-width: 50px; padding-top: 0; transform: translateX(-50%); border-radius: 999px; background: rgba(34, 34, 34, .6); text-align: center; font-size: 12px; color: #fff; line-height: 24px; font-weight: 400; }

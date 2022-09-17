@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+
+/* ===================================================
+	layout
+====================================================*/
+.dark {color-scheme: dark; }
+.dark {background-color: #222; border-color: #444; color: #eee; }
+
+.dark .header {background-color: #222; color: #fff; box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.38); }
+.dark .logo img {display: none; }
+.dark .logo img.dark {display: block; }
+.dark .btn-nav span,
+.dark .btn-nav span:after,
+.dark .btn-nav span:before {background-color: #fff; }
+
+
+.dark .user-popup li button,
+.dark .user-popup .user span {color: #aaa; }
+.dark .user-popup .user p {color: #fff; }
+.dark .user-popup .user {border-color: #333; }
+
+.user-popup li .profile:not(:hover) {background-image: url("../images/dark/header_profile.png"); }
+.user-popup li .lock:not(:hover) {background-image: url("../images/dark/header_lock.png"); }
+.user-popup li .logout:not(:hover) {background-image: url("../images/dark/header_logout.png"); }
+
+
+.dark .header-alarm:not(:hover) {background-image: url("../images/dark/header_alarm.png");}
+.dark .header-alarm:hover {background-color: #2e2f34; }
+.dark .alarm-list li + li {border-color: #333; }
+.dark .alarm-list li .date {color: #666; }
+.dark .alarm-list li .text {color: #bbb; }
+
+.dark .header-user {color: #fff; }
+.dark .header-user:before {background-color: #444; }
+.dark .header-user span:after,
+.dark .header-user span:before {background-color: #666; }
+
+.dark .container {background-color: #303030; }
+.dark .user-popup {background-color: #222; }
+
+.dark .nav-wrap {background-color: #222; box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.24); }
+.dark .nav-close {background-color: #222; border-color: #202020; box-shadow: 6px 0px 8px 0px rgba(0, 0, 0, 0.24); }
+.dark .nav-close:hover:after {background-color: #007bbf; }
+.dark .nav-category .category-menu {color: #666; }
+.dark .nav-category .category-menu:hover {color: #0080c7; }
+.dark .nav-title {color: #ccc; }
+.dark .nav-title:hover,
+.dark .depth .nav-title:hover {background-color: #2a2a2a; }
+.dark a.nav-title {background-color: transparent; }
+.dark a.nav-title:hover {background-color: transparent; color: #0080c7; }
+.dark .active a.nav-title {color: #0080c7; }
+
+.dark .sticky-top {background-color: #222; border-color: #333; }
+.dark .sticky-top:hover {background-color: #141516; }
+.dark .sticky-top span {color: #999; }
+.dark .sticky-top span:not(:hover):after,
+.dark .sticky-top span:not(:hover):before {background-color: #555; }
+.dark .sticky-top:hover span {color: #0080c7; }
+
+
+/* ===================================================
+	components
+====================================================*/
+.dark hr {border-color: #666; }
+.dark article {background-color: #222; border-color: #333; }
+
+.dark .loading:after {background-color: #919191; }
+.dark .title {color: #fff; }
+
+.dark .btn,
+.dark button {color: #ccc; border-color: #666; }
+
+.dark .bg-black {background-color: #eee; border-color: #eee; color: #333; }
+
+.dark .btn:hover:after,
+.dark button:hover:after {background-color: rgba(255, 255, 255, 0.1); mix-blend-mode: normal; }
+
+.dark input,
+.dark .input-text {background-color: #222; border-color: #666; color: #bbb; }
+
+.input-text:-webkit-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text:-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text:-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text::-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text::-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text::placeholder  {color: #888 !important; font-weight: 400 !important; }
+.input-text:placeholder  {color: #888 !important; font-weight: 400 !important; }
+
+.dark input[type="text"]:read-only,
+.dark .input-text:read-only,
+.dark input[type="text"].readonly {background-color: #404040; border-color: #666; }
+
+.dark .input-check,
+.dark input[type="checkbox"],
+.dark .input-radio,
+.dark input[type="radio"] {accent-color: #2596d5; }
+
+.dark .input-datepicker {background-image: url("../images/dark/icon_date.png"); }
+.dark .ui-datepicker-calendar tr:hover {background-color: transparent; }
+
+.dark textarea,
+.dark .textarea {background-color: #222; border-color: #666; }
+
+
+.dark select,
+.dark .select {background-image: url("../images/dark/select.png"); background-color: #222; border-color: #666; color: #bbb; }
+
+.dark select.readonly,
+.dark .select.readonly {background-color: #404040; border-color: #666; }
+
+.dark table th,
+.dark table td {color: #bbb; }
+.dark table th {background-color: #333; }
+.dark table tr {border-color: #444; }
+.dark table tr:hover {background-color: #2a2a2a; }
+.dark table tr:first-child {border-top-color: #666; }
+.dark table tr:last-child {border-color: #666; }
+
+
+.dark .breadcrumb li:after {border-color: #666; }
+.dark .breadcrumb li {color: #666; }
+.dark .breadcrumb li.active {color: #999; }
+
+.dark .guide {background-color: #222; }
+.dark .guide:before {color: #ccc; }
+.dark .guide-box {border-color: #444; background-color: #222; color: #bbb; }
+
+.dark .pagination > li:not(.current) > a,
+.dark .pagination > li:not(.current) > span {color: #bbb; }
+.dark .pagination > li:not(.current):hover > a,
+.dark .pagination > li:not(.current):hover > span {background-color: #333; }
+
+.dark .pagination .page-pprev {background-image: url("../images/dark/page_pprev.png"); }
+.dark .pagination .page-prev {background-image: url("../images/dark/page_prev.png"); }
+.dark .pagination .page-next {background-image: url("../images/dark/page_next.png"); }
+.dark .pagination .page-nnext {background-image: url("../images/dark/page_nnext.png"); }
+
+.dark .popup {background-color: #222; box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.7); }
+.dark .popup-body {color: #bbb; }
+.dark .popup-header {border-color: #333; }
+.dark .popup-close:hover:after,
+.dark .popup-close:hover:before {background-color: #eee; }
+
+.dark .tab01 li button,
+.dark .tab02 li button {color: #666; }
+.dark .tab01 li button:hover {color: #bbb; }
+
+.dark .tab01 li.active button,
+.dark .tab02 li.active button {color: #fff; }
+.dark .tab01 li.active button:after {background-color: #fff; }
+.dark .tab02 li button:after {background-color: #555; }
+.dark .tab02 li.active button:after {background-color: #fff; }
+.dark .tab02 li button:hover {color: #999; }
+.dark .tab02 li button:hover:after {background-color: #666; }
+.dark .tab02 li.active button:hover {color: #fff; }
+.dark .tab02 li.active button:hover:after {background-color: #fff; }
+
+.dark .ui-widget-content {background-color: #222; color: #ddd; border-color: #444; }
+.dark .ui-datepicker .ui-datepicker-header {background-color: #222; color: #ddd; }
+.dark .ui-datepicker .ui-datepicker-prev {background-image: url("../images/dark/date_prev.png"); }
+.dark .ui-datepicker .ui-datepicker-next {background-image: url("../images/dark/date_next.png");}
+.dark .ui-datepicker th {background-color: #222; }
+.dark .ui-state-default,
+.dark .ui-widget-content .ui-state-default,
+.dark .ui-widget-header .ui-state-default,
+.dark .ui-button {background-color: #222; color: #ddd; }
+.dark .ui-state-default.ui-state-highlight {background-color: #333; color: #0080c7; }
+.dark .ui-state-default.ui-state-active {background-color: #0080c7; color: #fff; }
+
+.dark .image-upload {background-color: #2a2a2a; }
+
+
+
+
+
+/* ===================================================
+	login
+====================================================*/
+.dark .login-wrap {background-color: #222; box-shadow: 0px 3px 20px 0px #202020; }
+.dark .login-form-area label {color: #666; }
+.dark .login-form-area input:not(:placeholder-shown) + label {color: rgb(210, 210, 210, 0.5); }
+
+
+

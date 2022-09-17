@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta property="og:image" content="../AppData/images/common/share.png">
+  <meta property="me2:image" content="../AppData/images/common/share.png">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../AppData/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../AppData/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../AppData/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../AppData/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../AppData/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../AppData/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../AppData/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../AppData/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../AppData/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../AppData/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../AppData/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../AppData/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../AppData/images/favicon/favicon-16x16.png">
+
+  <link rel="stylesheet" href="../AppData/css/fonts.css">
+  <link rel="stylesheet" href="../AppData/css/normalize.css">
+  <link rel="stylesheet" href="../AppData/css/reset.css">
+  <link rel="stylesheet" href="../AppData/css/jquery-ui.css">
+  <link rel="stylesheet" href="../AppData/css/layout.css">
+  <link rel="stylesheet" href="../AppData/css/components.css">
+  <link rel="stylesheet" href="../AppData/css/dark.css">
+
+  <script src="../AppData/js/jquery.js"></script>
+  <script src="../AppData/js/jquery-ui.js"></script>
+  <script src="../AppData/js/design.js"></script>
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+	hr {margin: 40px 0; border-top: 1px dashed #ccc; }
+	section {margin: 10% 0; }
+	section:first-child {margin-top: 0; }
+	.ui-title {margin-bottom: 16px; padding-bottom: 8px; border-bottom: 3px solid #666; font-size: 28px; font-weight: 700; color: #111; }
+	.ui-title02 {display: block; margin-bottom: 12px;font-size: 18px; font-weight: 500; color: #444; }
+	.ui-title02 .ui-text {margin: 0; }
+
+	.ui-text {margin: 36px 0 16px; font-size: 14px; font-weight: 400; color: #444; }
+
+	.division {margin: 20px 0; }
+	.division > p {color: #666; }
+
+</style>
+
+
+
+<div id="wrapper" class="wrapper">
+	<!-- S: loading -->
+	<div class="loading-wrap">
+		<div class="loading"> 
+		  <div class="bar bar1"></div>
+		  <div class="bar bar2"></div>
+		  <div class="bar bar3"></div>
+		  <div class="bar bar4"></div>
+		  <div class="bar bar5"></div>
+		  <div class="bar bar6"></div>
+		  <div class="bar bar7"></div>
+		  <div class="bar bar8"></div>
+		  <div class="bar bar9"></div>
+		  <div class="bar bar10"></div>
+		  <div class="bar bar11"></div>
+		  <div class="bar bar12"></div>
+		</div>
+	</div>
+	<!-- E: loading -->
+
+	<!-- S: top 상단이동 -->
+	<div class="sticky-wrap">	
+		<button type="button" class="sticky-top"><span>TOP</span></button>
+	</div>
+
+	<!-- S: header -->
+	<header id="header" class="header">
+		<button type="button" class="btn-nav"><em class="visuallyhidden">메뉴 여닫기</em><span></span></button>
+		<h1 class="logo">
+			<a href="components.html" alt="logo">
+				<img src="../AppData/images/common/logo.png" alt="logo">
+				<img src="../AppData/images/dark/logo.png" alt="logo" class="dark">
+			</a>
+		</h1>
+		<div class="header-util">
+			<div class="alarm-wrap">
+				<button type="button" class="header-alarm"><span class="visuallyhidden">Alarm</span><span class="badge">1</span></button>
+
+				<div class="popup" id="popup_alarm">
+					<div class="popup-body"> 
+						<ul class="alarm-list"> 
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"> 
+									<span class="date">2021.12.01</span>
+									<p class="text"><span>mine</span>님이 문의글을 올렸습니다.</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header-right"> 
+				<ul>
+					<li class="header-user-wrap">
+						<button type="button" class="header-user"><span>mine_pp</span></button>
+						<div class="user-popup">
+							<div class="user">
+								<span>mine_pp</span>
+								<p>Min Hye Park</p>
+							</div>
+							<ul>
+								<li><button type="button" class="profile">Profile</button></li> 
+								<li><button type="button" class="lock">Lock</button></li> 
+								<li><button type="button" class="logout">Logout</button></li>
+								<li>
+									<div class="dark-switch"> 
+										<input type="checkbox" id="ck_dark" class="check-dark">
+										<label for="ck_dark"> 
+											<span>Light</span>
+											<span>Dark</span>
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- E: header -->
+
+
+	<button type="button" class="nav-close">메뉴 닫기</button>
+	<nav class="nav-wrap">		
+		<ul class="nav">
+			<li class="depth">
+				<button class="nav-title">Menu01</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu active">page01</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">page02</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">Menu02</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu active">page01</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">page02</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">Menu03</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu active">page01</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">page02</a>
+					</li>
+				</ul>
+			</li>
+			<li class="active">
+				<a href="page.html" class="nav-title">Page</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container">
+
+		<div class="contents">
+			<div class="page-header">
+				<strong class="title">Page title
+					<button type="button" class="guide"><span class="visuallyhidden">가이드 보기</span></button>
+					<div class="guide-wrap">
+						<div class="guide-box"> 
+							<p>안녕하세요~!!~~~~~~~~~~~~~~~~~~ 예시입니다 ~!!!!!!!!!!!!! 재밌네요 ~!!!!!!!!!!!</p>
+						</div>
+					</div> 
+				</strong>
+				<ul class="breadcrumb">
+					<li><a href="#">depth01</a></li>
+					<li><a href="#">depth02</a></li>
+					<li class="active"><a href="#">depth03</a></li>
+				</ul>
+			</div>
+			<article class="search-wrap"> 
+				<div class="form-wrap"> 
+					<div class="form-item">
+						<label for="input01" class="input-title">input label</label>
+						<input type="text" class="full" id="input01">
+					</div>
+					<div class="form-item">
+						<label for="input02" class="input-title">인풋 라벨 타이틀</label>
+						<input type="text" class="full" id="input02">
+					</div>
+					<div class="form-item">
+						<label for="input01" class="input-title">input label</label>
+						<input type="text" class="full" id="input01">
+					</div>
+					<div class="form-item">
+						<label for="input02" class="input-title">인풋 라벨 타이틀</label>
+						<input type="text" class="full" id="input02">
+					</div>
+					<div class="form-item full">
+						<label for="input01" class="input-title">input label</label>
+						<div class="datepicker-wrap">
+							<input type="text" class="input-datepicker" id="input01"> <span class="swing">~</span> <input type="text" class="input-datepicker" id="input01">
+						</div>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="bg-main btn-round btn-search">조회</button>
+					<button type="button" class="btn-round btn-search">초기화</button>
+				</div>
+			</article>
+
+			<article> 
+				<div class="table-header"> 
+					<p>검색결과 <em>(<span>9,999</span>)</em></p>
+					<select> 
+						<option>10개 보기</option>
+						<option>20개 보기</option>
+						<option>30개 보기</option>
+						<option>40개 보기</option>
+						<option>50개 보기</option>
+					</select>
+				</div>
+				<div class="table-default">
+					<table>
+						<colgroup><col width="5%">
+							<col width="15%">
+							<col width="*">
+							<col width="20%">
+							<col width="10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th><input type="checkbox" id=""></th>
+								<th>Th02</th>
+								<th>Th03</th>
+								<th>Th04</th>
+								<th>Th05</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id=""></td>
+								<td>Td02</td>
+								<td>Td03</td>
+								<td>Td04</td>
+								<td>Td05</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pagination-wrap"> 
+					<ul class="pagination"> 
+						<li>
+							<span class="page-pprev"><span class="visuallyhidden">처음으로 이동</span></span>
+						</li>
+						<li>
+							<span class="page-prev"><span class="visuallyhidden">이전페이지 이동</span></span>
+						</li>
+						<li class="current"> 
+							<span>1</span>
+						</li>
+						<li> 
+							<span>2</span>
+						</li>
+						<li> 
+							<span>3</span>
+						</li>
+						<li> 
+							<span>4</span>
+						</li>
+						<li> 
+							<span>5</span>
+						</li>
+						<li>
+							<span class="page-next"><span class="visuallyhidden">다음페이지 이동</span></span>
+						</li>
+						<li>
+							<span class="page-nnext"><span class="visuallyhidden">마지막으로 이동</span></span>
+						</li>
+					</ul>
+				</div>
+			</article>
+
+
+
+		</div>
+
+	</div>
+</div>
+
+</body>
+<script src="../AppData/js/dark.js"></script>
+</html>
+
