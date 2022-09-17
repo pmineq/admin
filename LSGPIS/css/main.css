@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+/* =================================
+*
+*   main css
+*   min-width: 1200px 기준
+*
+================================== */
+.main {}
+
+
+
+
+
+/* ===================================================
+	main-wrap
+====================================================*/
+.main-wrap {position: absolute; top: 50%; left: 0; min-width: 940px; max-height: 100%; padding: 20px 20px; box-sizing: border-box; transform: translateY(-50%); }
+.main-wrap .logo {display: block; margin: 0 auto 40px; text-align: center; }
+
+.main-wrap .logo p {margin-top: 15px; font-size: 16px; color: #444; text-align: center; }
+
+input[type="text"].main-search {display: block; width: 600px; height: 50px; margin: 0 auto 80px; padding-left: 50px; border-radius: 999px; background-image: url("../images/common/main_search.svg"); background-repeat: no-repeat; background-position: left 20px center; background-size: 20px auto; }
+
+.main .dashboard-wrap {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-lines: multiple; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 940px; }
+
+.dashboard-box {border: 1px solid #ddd; border-radius: 10px; background-color: #fff; box-sizing: border-box; }
+.dashboard-box:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+.dashboard-box.info {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: calc(33.333% - 13.333px); padding: 35px 20px; }
+.dashboard-box.info .icon {float: left; width: 60px; height: 60px; margin-right: 20px; background-repeat: no-repeat; background-size: contain; background-position: center center; }
+.dashboard-box.info .icon-update {background-image: url("../images/common/main_update.png"); }
+.dashboard-box.info .icon-amount {background-image: url("../images/common/main_amount.png"); }
+.dashboard-box.info .icon-company {background-image: url("../images/common/main_company.png"); }
+
+
+.dashboard-box.info p {float: left; margin-top: 10px; font-weight: 400; color: #444; }
+.dashboard-box.info p span {display: block; margin-bottom: 5px; font-size: 14px; }
+.dashboard-box.info p strong {display: block; font-size: 18px; font-weight: 400; }
+.dashboard-box.info p strong b {font-size: 24px; font-weight: 500; }
+
+
+.dashboard-box.info + .dashboard-box.info,
+.dashboard-box.graph + .dashboard-box.graph {margin-left: 20px; }
+
+.dashboard-box.graph {width: calc(50% - 10px); margin-top: 20px; padding: 30px 20px; }
+.dashboard-box.graph canvas {width: 100%; }
+
+.dashboard-title {margin-bottom: 30px; }
+.dashboard-title:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+.dashboard-title .title {float: left; font-size: 16px; font-weight: 400; color: #222; line-height: 20px; }
+.dashboard-title .update {float: right; line-height: 20px; vertical-align: middle; }
+.dashboard-title .update:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+.dashboard-title .update span {position: relative; float: left; font-size: 12px; color: #888; }
+.dashboard-title .update span + span {margin-left: 5px; padding-left: 6px; }
+.dashboard-title .update span + span:before {content: ""; display: block; position: absolute; top: 50%; left: 0; width: 1px; height: 8px; background-color: #aaa; transform: translateY(-50%); }
+.dashboard-title .btn-reset {float: left; width: 20px; height: 20px; margin-left: 10px; border: 1px solid #d0d0d0; border-radius: 5px; background-color: #fff; background-image: url("../images/common/btn_reset.png"); background-repeat: no-repeat; background-position: center center; background-size: auto 10px; }
+.dashboard-title .btn-reset:hover {background-color: #eee; }
+
+
+
+@media screen and (min-width: 1230px) {
+	.main-wrap {left: 50%; transform: translate(-50%, -50%); }
+}

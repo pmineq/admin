@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL PAGE</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+  <!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  
+  <!-- 플러그인 css -->
+    <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.min.css">
+
+  <!-- grid css -->
+  <link href="css/AUIGrid_style.css" rel="stylesheet">
+
+  <!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.multiselect2.js"></script>
+  <script src="js/pub.resizer.js"></script>
+  <script src="js/pub.splitter.js"></script>
+  <script src="js/pub.tab.js"></script>
+
+
+  <!--grid js -->
+  <script src="js/AUIGridLicense.js"></script>
+  <script src="js/AUIGrid.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+
+
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+  <!-- 사용자 js -->
+  <script src="js/design.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="contents-box">
+		<!-- S: contents-detail -->
+		<div class="contents-detail">
+				<div class="box">
+					<div class="page-header">
+						<p class="text text-right">(최종 정보 확인일 : 2021-10-04)</p>
+						<strong class="title small">고객사(사업자등록증) 정보 및 담당자정보</strong>
+						<div class="btn-group">
+							<button type="button" class="btn bg-main small">사업자등록증 조회</button>
+							<button type="button" class="btn btn-icon bg-main small business">사업자등록증 변경</button>
+							<button type="button" class="btn btn-icon bg-main small manager">담당자 정보 변경</button>
+						</div>
+					</div>
+
+					<!-- S: table-style01 -->
+					<div class="table-style01">
+						<table>
+							<colgroup>
+								<col width="16%">
+								<col width="11%">
+								<col width="15%">
+								<col width="11%">
+								<col width="7%">
+								<col width="11%">
+								<col width="11%">
+								<col width="7%">
+								<col width="11%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th colspan="9">고객사 정보</th>
+								</tr>
+								<tr>
+									<td>①</td>
+									<td colspan="2">법인명</td>
+									<td colspan="6">㈜ 삼동</td>
+								</tr>
+								<tr>
+									<td>②</td>
+									<td colspan="2">대표이사</td>
+									<td colspan="6">이이주</td>
+								</tr>
+								<tr>
+									<td>③</td>
+									<td colspan="2">주소(우편번호)</td>
+									<td colspan="6">충정북도 음성군 대소면 삼호리산 39(27673)</td>
+								</tr>
+								<tr>
+									<td>④</td>
+									<td colspan="2">대표 전화번호</td>
+									<td colspan="6">044-877-4001</td>
+								</tr>
+								<tr>
+									<td>⑤</td>
+									<td colspan="2">업종</td>
+									<td colspan="6">평각선, 스트립</td>
+								</tr>
+								<tr>
+									<td>⑥</td>
+									<td colspan="2">업태</td>
+									<td colspan="6">제조업</td>
+								</tr>
+								<tr>
+									<th colspan="9">담당자 정보</th>
+								</tr>
+								<tr>
+									<td colspan="3">세금계산서 수신처</td>
+									<td colspan="3">주 담당자</td>
+									<td colspan="3">부 담당자</td>
+								</tr>
+								<tr>
+									<td rowspan="2">담당자 전화번호</td>
+									<td>내선번호</td>
+									<td>044-877-400*</td>
+									<td rowspan="2">담당자 정보</td>
+									<td>이름</td>
+									<td>김선근</td>
+									<td rowspan="2">담당자 정보</td>
+									<td>이름</td>
+									<td>김선근</td>
+								</tr>
+								<tr>
+									<td>무선번호</td>
+									<td>010-****-****</td>
+									<td>직함</td>
+									<td>팀장</td>
+									<td>직함</td>
+									<td>팀장</td>
+								</tr>
+								<tr>
+									<td rowspan="3">수신 E-mail</td>
+									<td colspan="2" rowspan="3">
+										<a href="mailto: Seongeun.kim@samdong.com">Seongeun.kim@samdong.com</a>
+									</td>
+									<td rowspan="2">전화번호</td>
+									<td>내선번호</td>
+									<td>044-877-400*</td>
+									<td rowspan="2">전화번호</td>
+									<td>내선번호</td>
+									<td>044-877-400*</td>
+								</tr>
+								<tr>
+									<td>무선번호</td>
+									<td>010-****-****</td>
+									<td>무선번호</td>
+									<td>010-****-****</td>
+								</tr>
+								<tr>
+									<td>담당자 E-mail</td>
+									<td colspan="2">
+										<a href="mailto: Seongeun.kim@samdong.com">Seongeun.kim@samdong.com</a>
+									</td>
+									<td>담당자 E-mail</td>
+									<td colspan="2">
+										<a href="mailto: Seongeun.kim@samdong.com">Seongeun.kim@samdong.com</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- E: table-style01 -->
+
+				</div>
+		</div>
+		<!-- E: contents-detail -->
+	</div>
+</body>
+</html>

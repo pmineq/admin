@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL LOGIN PAGE</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+  <!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  <link rel="stylesheet" href="css/vt-mgmt.css">
+
+  <!-- 플러그인 css -->
+  <link rel="stylesheet" href="css/plugins/datepicker/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.css">
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.min.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default-dark/style.css">
+  <link rel="stylesheet" href="css/plugins/jstree/default-dark/style.min.css">
+  <link rel="stylesheet" href="js/plugins/file/dropzone.css">
+
+  <!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.multiselect2.js"></script>
+  <script src="js/pub.resizer.js"></script>
+  <script src="js/pub.splitter.js"></script>
+  <script src="js/pub.tab.js"></script>
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+  <script src="js/plugins/file/dropzone.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+  <script src="js/plugins/jstree/jstreegrid.js"></script>
+
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+
+  <!-- 사용자 js -->
+  <script src="js/design.js"></script>
+
+
+</head>
+
+<body>
+
+<div id="wrapper" class="wrapper">
+
+	<div class="container login">
+    <!-- S: login-bg-->
+    <div class="login-bg">
+      <img src="images/common/login_bg.png">
+      <div class="logo-bg">
+        <img src="images/common/logo_w.png">
+        <p>All Name, Logos and Trademarks are the Property of LS-Nikko Copper Inc.<br>
+          Copyright LS-Nikko Copper Inc. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- E: login-bg -->
+
+    <!-- S: login-wrap -->
+    <div class="login-wrap">
+      
+      <div class="login-form">
+        <img src="images/common/logo.png">
+        <strong>Partner Lounge</strong>
+
+        <form>
+          <div class="login-form-area">
+            <label for="user_id">ID</label>
+            <input type="text" id="user_id" class="input-text" placeholder="please id ...">
+          </div>
+          <div class="login-form-area">
+            <label for="user_pw">Password</label>
+            <input type="password" id="user_pw" class="input-text" placeholder="please password ...">
+          </div>
+          <button type="button" class="btn-login">로그인</button>
+          <div class="login-savelang-group">
+            <div class="save-area">
+              <input type="checkbox" class="input-check" id="save_id">
+              <label for="save_id">ID Save</label>
+            </div>
+            <select class="select">
+              <option>English</option>
+              <option>Korean</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="login-send">
+          <span>Send mail for password reset</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- E: login-wrap -->
+	</div>
+</div>
+
+</body>
+</html>
+

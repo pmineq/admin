@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1200">
+
+    <!-- 기본 css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+    <!-- 디자인 css -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- 기본 js -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- 디자인 js -->
+    <script type="text/javascript" src="js/design.js"></script>
+
+    <!-- main 그래프 js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+    <script>
+       $(function() {
+          //Graph :: Bar
+          var graph01 = document.getElementById("graph01").getContext("2d"); 
+
+          var data = {
+              labels: ["LS전선","동제련","Electory","GS"],
+              datasets: [{
+                  fillColor : 'rgba(0,172,213,0.6)',
+                  strokeColor : "#0081C4",
+                  data: [40000, 25000, 35000, 48000],
+              }
+            ]
+          };
+
+          var options = {
+              // responsive: true,
+              tooltipFillColor: "rgba(0,0,0,0.8)",
+              tooltipFontStyle: "bold",
+              tooltipTemplate: "<%if (label){%><%=label + ' 구매금액' %>: <%}%><%= value %>",
+              scaleLabel : "<%= Number(value).toFixed(0).replace('.', ',') %>"
+          };
+
+          var myBarGraph01 = new Chart(graph01).Bar(data, options);
+
+
+          var graph02 = document.getElementById("graph02").getContext("2d"); 
+
+
+          var data = {
+              labels: ['홍콩','EU','유럽','아시아'],
+              datasets: [{
+                  fillColor : 'rgba(0,172,213,0.6)',
+                  strokeColor : "#0081C4",
+                  data: [30000,20000,15000,5000],
+              }
+            ]
+          };
+
+          var options = {
+              // responsive: true,
+              tooltipFillColor: "rgba(0,0,0,0.8)",
+              tooltipFontStyle: "bold",
+              tooltipTemplate: "<%if (label){%><%=label + ' 구매금액' %>: <%}%><%= value %>",
+              scaleLabel : "<%= Number(value).toFixed(0).replace('.', ',') %>"
+          };
+
+          var myBarGraph02 = new Chart(graph02).Bar(data, options);
+       });
+
+    </script>
+  </head>
+  <body>
+    <!-- S: wrapper -->
+    <div id="wrapper" class="main">
+
+      <!-- S: header -->
+      <header id="header">
+        <button type="button" class="header-menu"><span class="visuallyhidden">메뉴 열고 닫기</span></button>
+        <div class="header-logo">
+          <img src="images/common/logo_w.png" alt="로고">
+        </div>
+
+        <div class="header-util">
+          
+          <button type="button" class="header-notice">
+            <span class="visuallyhidden">알림</span>
+            <span class="badge">1</span>
+          </button>
+
+          <div class="header-user">
+            <div class="thumb">
+              <!-- 프로필 사진 설정한 경우
+                 <img src="images/sample/user.jpg" alt="프로필사진"> -->
+            </div>
+            <span class="name">admin</span>
+          </div>
+
+          <button type="button" class="header-logout">logout</button>
+
+        </div>
+      </header>
+      <!-- E: header -->    
+
+      <!-- S: lnb -->
+      <nav class="lnb">
+        <ul>
+          <li class="lnb-home">
+            <a href="main.html">Home</a>
+          </li>
+
+          <!-- 버튼 누르면 li open -->
+          <li>
+            <button type="button" class="lnb-title">기준정보</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <!-- 누른 페이지 active -->
+              <li class="active">
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">구매이력</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">통계</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">게시판</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="lnb-time">
+          <div class="time">
+            <span>Session Time</span>
+            <strong>17:50</strong>
+          </div>
+          <button type="button" class="btn-reset">reset</button>
+        </div>
+      </nav>
+      <!-- E: lnb -->
+
+      <!-- S: container -->
+      <div id="container">
+          
+        <div class="main-wrap">
+          <div class="logo">
+            <img src="images/common/logo.svg" alt="로고">
+            <p>Global Purchase Information System</p>
+          </div>
+
+          <input type="text" class="main-search" placeholder="제품 Keyword, 업체명, 국가명 등을 검색해 주세요.">
+
+          <div class="dashboard-wrap">
+            
+            <div class="dashboard-box info">
+              <i class="icon icon-update"></i>
+              <p>
+                <span>마지막 업데이트</span>
+                <strong><b>2022.03.12</b></strong>
+              </p>
+            </div>
+
+            <div class="dashboard-box info">
+              <i class="icon icon-amount"></i>
+              <p>
+                <span>연간 총 구매금액</span>
+                <strong><b>3조 999억</b>원</strong>
+              </p>
+            </div>
+
+            <div class="dashboard-box info">
+              <i class="icon icon-company"></i>
+              <p>
+                <span>연간 총 거래업체</span>
+                <strong><b>13,450</b>개</strong>
+              </p>
+            </div>
+
+            <div class="dashboard-box graph">
+              
+              <div class="dashboard-title">
+                <h3 class="title">법인별 구매금액</h3>
+                <div class="update">
+                  <span>최근 업데이트</span>
+                  <span>2022년 3월</span>
+                  <button type="button" class="btn-reset"><span class="visuallyhidden">새로고침</span></button>
+                </div>
+              </div>
+
+              <canvas id="graph01"></canvas>
+
+            </div>
+
+            <div class="dashboard-box graph">
+              
+              <div class="dashboard-title">
+                <h3 class="title">지역별 구매금액</h3>
+                <div class="update">
+                  <span>최근 업데이트</span>
+                  <span>2022년 3월</span>
+                  <button type="button" class="btn-reset"><span class="visuallyhidden">새로고침</span></button>
+                </div>
+              </div>
+
+              <canvas id="graph02"></canvas>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- E: container -->
+
+      <!-- S: footer -->
+      <footer id="footer">
+        ⓒFrameLS 2022
+      </footer>
+      <!-- E: footer -->
+
+    </div>
+    <!-- E: wrapper -->
+  </body>
+  
+</html>

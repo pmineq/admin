@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* =======================================================
+	NotoSansKR
+========================================================*/
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 200;
+    font-style: normal;    
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'), url('../fonts/Notosans/kr/NotoSans-Thin.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-Thin.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-Thin.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-Thin.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 300;
+    font-style: normal;    
+    src: local('Noto Sans Light'), local('NotoSans-Light'), url('../fonts/Notosans/kr/NotoSans-Light.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-Light.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-Light.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-Light.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 400;
+    font-style: normal;    
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('../fonts/Notosans/kr/NotoSans-Regular.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-Regular.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-Regular.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-Regular.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 500;
+    font-style: normal;    
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'), url('../fonts/Notosans/kr/NotoSans-Medium.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-Medium.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-Medium.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-Medium.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 700;
+    font-style: normal;    
+    src: local('Noto Sans bold'), local('NotoSans-bold'), url('../fonts/Notosans/kr/NotoSans-bold.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-bold.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-bold.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-bold.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-bold.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: NotoSansKR;
+    font-weight: 900;
+    font-style: normal;    
+    src: local('Noto Sans black'), local('NotoSans-black'), url('../fonts/Notosans/kr/NotoSans-black.eot'); 
+    src: url('../fonts/Notosans/kr/NotoSans-black.eot');
+    src: url('../fonts/Notosans/kr/NotoSans-black.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/Notosans/kr/NotoSans-black.woff2') format('woff2'),
+         url('../fonts/Notosans/kr/NotoSans-black.woff') format('woff'),
+         url('../fonts/Notosans/kr/NotoSans-black.ttf') format('truetype');
+}
+
+
+

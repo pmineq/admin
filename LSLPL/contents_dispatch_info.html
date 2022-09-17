@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL PAGE</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+  <!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  
+  <!-- 플러그인 css -->
+    <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.min.css">
+
+  <!-- grid css -->
+  <link href="css/AUIGrid_style.css" rel="stylesheet">
+
+  <!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.multiselect2.js"></script>
+  <script src="js/pub.resizer.js"></script>
+  <script src="js/pub.splitter.js"></script>
+  <script src="js/pub.tab.js"></script>
+
+
+  <!--grid js -->
+  <script src="js/AUIGridLicense.js"></script>
+  <script src="js/AUIGrid.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+
+
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+  <!-- 사용자 js -->
+  <script src="js/design.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="contents-box">
+		<!-- S: contents-detail -->
+		<div class="contents-detail">
+				<div class="box">
+					<div class="page-header">
+						<strong class="title small">배차 관련 서류 정보</strong>
+						<div class="btn-group">
+							<button type="button" class="btn bg-main small">저장</button>
+						</div>
+					</div>
+
+					<!-- S: table-style01 -->
+					<div class="table-style01">
+						<table>
+							<colgroup>
+								<col width="20%">
+								<col width="40%">
+								<col width="40%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">배차 관련 서류</td>
+									<!-- 완료되었을 때 .finish 추가  -->
+									<td class="sub-th finish"><span>운송사 사업증등록증</span></td>
+									<td class="sub-th finish"><span>배차위임장</span></td>
+								</tr>
+								<tr>
+									<td>
+										<input type="file">
+									</td>
+									<td>
+										<input type="file">
+									</td>
+								</tr>
+
+								<tr>
+									<th rowspan="4">계좌등록서류</th>
+									<td class="sub-th finish"><span>납품대급지급 약정서</span></td>
+									<td class="sub-th finish"><span>개인정보수집</span></td>
+								</tr>
+								<tr>
+									<td>
+										<input type="file">
+									</td>
+									<td>
+										<input type="file">
+									</td>
+								</tr>
+
+								<tr>
+									<td class="sub-th finish"><span>법인(개인) 인감증명</span></td>
+									<td class="sub-th finish"><span>은행통장사본</span></td>
+								</tr>
+								<tr>
+									<td>
+										<input type="file">
+									</td>
+									<td>
+										<input type="file">
+									</td>
+								</tr>
+								<tr>
+									<th colspan="3">안내문구</th>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<p class="text-left">
+											-안내문구
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- E: table-style01 -->
+
+				</div>
+		</div>
+		<!-- E: contents-detail -->
+	</div>
+</body>
+</html>

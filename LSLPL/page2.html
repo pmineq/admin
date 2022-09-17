@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL PAGE</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+	<!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  <link rel="stylesheet" href="css/vt-mgmt.css">
+
+  <!-- 플러그인 css -->
+  <link rel="stylesheet" href="css/plugins/datepicker/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.css">
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.min.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default-dark/style.css">
+  <link rel="stylesheet" href="css/plugins/jstree/default-dark/style.min.css">
+  <link rel="stylesheet" href="js/plugins/file/dropzone.css">
+
+  <!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.multiselect2.js"></script>
+  <script src="js/pub.resizer.js"></script>
+  <script src="js/pub.splitter.js"></script>
+  <script src="js/pub.tab.js"></script>
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+  <script src="js/plugins/file/dropzone.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+  <script src="js/plugins/jstree/jstreegrid.js"></script>
+
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+
+  <!-- 사용자 js -->
+  <script src="js/design.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="wrapper" class="wrapper nav-close">
+	<!-- S: loading -->
+	<div class="loading-wrap">
+		<div class="loading"> 
+		  <div class="bar bar1"></div>
+		  <div class="bar bar2"></div>
+		  <div class="bar bar3"></div>
+		  <div class="bar bar4"></div>
+		  <div class="bar bar5"></div>
+		  <div class="bar bar6"></div>
+		  <div class="bar bar7"></div>
+		  <div class="bar bar8"></div>
+		  <div class="bar bar9"></div>
+		  <div class="bar bar10"></div>
+		  <div class="bar bar11"></div>
+		  <div class="bar bar12"></div>
+		</div>
+	</div>
+	<!-- E: loading -->
+
+	<!-- S: top 상단이동 -->
+	<div class="sticky-wrap">	
+		<button type="button" class="sticky-top"><span>TOP</span></button>
+	</div>
+
+	<!-- S: header -->
+	<header id="header" class="header">
+		<button type="button" class="btn-nav-close">
+			<span class="line-wrap">
+				<i class="line"></i>
+				<i class="line"></i>
+				<i class="line"></i>
+			</span>
+			<span class="visuallyhidden">메뉴 닫기</span> 
+		</button>	
+		<h1 class="logo">
+			<a href="page2.html" alt="logo">
+				<img src="images/common/logo.png" alt="logo" class="pc">
+			</a>
+		</h1>
+		<div class="header-util">
+			<div class="search-common"> 
+				<select class="select"> 
+					<option>Toyota Tsusho Material Incorporated</option>
+					<option>SAMSUNG</option>
+					<option>APPLE</option>
+				</select>
+				<div class="search-input-group">
+					<input type="text" class="input-text" placeholder="검색">
+					<button type="button" class="btn"><span class="visuallyhidden">검색</span></button>
+				</div>
+			</div>
+
+			<div class="header-right"> 
+				<ul>
+					<li class="header-user-wrap">
+						<button type="button" class="btn header-user">
+							<em>RW 원료</em>
+							<span>ID_Honggildong</span> 
+						</button>
+						<div class="user-popup">
+							<div class="user">
+								<span>ID_Honggildong</span>
+								<p>Hong gil dong</p>
+							</div>
+							<ul>
+								<li><button type="button" class="btn profile">Profile</button></li>
+								<li><button type="button" class="btn lock">Lock</button></li>
+								<li><button type="button" class="btn logout">Logout</button></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- E: header -->
+
+	<!-- S: nav-wrap -->
+	<nav class="nav-wrap">				
+		<div class="menu-choice"> 
+			<button type="button" class="menu active">Menu</button>
+			<button type="button" class="favorite">Favorite</button>
+		</div>
+
+		<div class="search-input-group">
+			<input type="text" class="input-text" placeholder="검색">
+			<button type="button" class="btn"><span class="visuallyhidden">검색</span></button>
+		</div>
+
+		<ul class="nav menu active">
+			<!-- 열려있는 페이지의 대분류 li에 current 추가 -->
+			<li class="depth active current">
+				<button class="nav-title">
+					TO-DO
+					<i class="icon icon-todo"></i>
+				</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu active">계약현황</a>
+					</li>
+					<li>
+						<a href="/mtral/transport/paperMgmt" class="category-menu" target="iframe">월별 선적 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">차선 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">정선 현황</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">
+					계약관리
+					<i class="icon icon-contract"></i>
+				</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu">계약현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">월별 선적 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">차선 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">정선 현황</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">
+					선적/입고 관리
+					<i class="icon icon-shipping"></i>
+				</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu">계약현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">월별 선적 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">차선 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">정선 현황</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">
+					지급관리
+					<i class="icon icon-payment"></i>
+				</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu">계약현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">월별 선적 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">차선 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">정선 현황</a>
+					</li>
+				</ul>
+			</li>
+			<li class="depth">
+				<button class="nav-title">
+					Claim
+					<i class="icon icon-claim"></i>
+				</button>
+				<ul class="nav-category">
+					<li>
+						<a href="#" class="category-menu">계약현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">월별 선적 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">차선 현황</a>
+					</li>
+					<li>
+						<a href="#" class="category-menu">정선 현황</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav favorite">
+			<!-- 열려있는 페이지의 대분류 li에 current 추가 -->
+			<li class="current">
+				<a href="#" class="nav-title">
+					계약현황
+				</a>
+			</li>
+			<li>
+				<a href="#" class="nav-title">
+					고객마스터
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- S: nav-wrap -->
+
+	<!-- S: container -->
+	<div class="container">
+
+		<!-- S: contents -->
+		<div class="contents">
+			<!-- S: contents-tab -->
+			<div class="contents-tab">
+				<ul class="tab-list"> 
+					<li>
+						<div class="tab">
+							<p>고객마스터</p>
+							<button type="button" class="tab-close"><span class="visuallyhidden">탭 닫기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="tab active">
+							<p>계약현황</p>
+							<button type="button" class="tab-close"><span class="visuallyhidden">탭 닫기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<p>월별선적현황</p>
+							<button type="button" class="tab-close"><span class="visuallyhidden">탭 닫기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<p>차선현황</p>
+							<button type="button" class="tab-close"><span class="visuallyhidden">탭 닫기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="tab">
+							<p>고객서비스현황</p>
+							<button type="button" class="tab-close"><span class="visuallyhidden">탭 닫기</span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- E: contents-tab -->
+
+
+			<div class="iframe-wrap">
+				<!-- S: iframe -->
+				<iframe id="iframe" name="iframe" src="/prduct/contract/management"></iframe>
+				<!-- E: iframe -->
+			</div>
+
+		</div>
+		<!-- E: contents -->
+
+	</div>
+	<!-- E: container -->
+
+	<!-- S: footer -->
+	<footer class="footer">
+	  <div class="footer-inner">
+	    All Name, Logos and Trademarks are the Property of LS-Nikko Copper Inc.<br>
+	    Copyright LS-Nikko Copper Inc. All rights reserved.
+	  </div>
+	</footer>
+	<!-- E: footer -->
+</div>
+
+</body>
+</html>
+

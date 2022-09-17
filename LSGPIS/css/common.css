@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+
+/* =================================
+*
+*   common css
+*   design components
+*
+================================== */
+
+.bg-main {background-color: #003876; }
+.bg-point {background-color: #ed164b; }
+
+.text-main {color: #003876; }
+.text-point {color: #ed164b; }
+
+
+
+
+
+/* ===================================================
+	breadcrumbs
+====================================================*/
+.breadcrumbs {margin-bottom: 10px; }
+.breadcrumbs:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.breadcrumbs li {position: relative; float: left; font-size: 12px; font-weight: 300; color: #888; line-height: 16px; }
+.breadcrumbs li:last-child {font-weight: 400; }
+.breadcrumbs li + li {margin-left: 5px; padding-left: 8px; background-image: url("../images/common/breadcrumbs_arrow.png"); background-repeat: no-repeat; background-size: 3px auto; background-position: left center; }
+
+
+
+
+
+/* ===================================================
+	title
+====================================================*/
+.title-wrap {margin-bottom: 10px; }
+.title-wrap:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+.title {position: relative; font-size: 16px; font-weight: 500; color: #222; }
+
+.title-wrap .icon {float: left; margin-right: 6px; line-height: 20px; }
+.title-wrap .title {display: block; float: left; line-height: 20px; }
+
+
+
+
+
+/* ===================================================
+	icon
+====================================================*/
+.icon {display: block; background-repeat: no-repeat; background-position: center center; }
+
+.icon-search {width: 24px; height: 20px; background-image: url("../images/common/icon_search.svg"); background-size: auto 20px; }
+
+
+
+
+
+/* ===================================================
+	Button
+====================================================*/
+.btn {display: inline-block; position: relative; min-width: 40px;  height: 40px; padding: 0 15px; border-radius: 5px; outline: none; background-color: #003378; font-size: 14px; font-weight: 400; color: #fff; line-height: 38px; text-align: center; white-space: nowrap; vertical-align: middle; -webkit-appearance: none; }
+
+.btn.small {height: 30px; line-height: 28px; }
+
+.btn .icon {display: inline-block; margin-right: 2px; }
+.btn .icon-search02 {width: 14px; height: 14px; margin-top: -1px; background-image: url("../images/common/icon_search02.svg"); background-repeat: no-repeat; background-size: contain; background-position: center center; line-height: 14px; vertical-align: middle; }
+
+
+
+/* ===================================================
+	form
+====================================================*/
+
+label {display: block; margin-bottom: 2px; font-size: 11px; color: #444; line-height: 15px; }
+
+/* input
+-----------------------------------------------------*/
+input[type="text"],
+input[type="password"] {display: inline-block; width: 250px; height: 30px; padding: 0 15px; border-radius: 5px; box-sizing: border-box; background-color: #fff; border: 1px solid #ddd; font-size: 14px; color: #444; }
+input[type="text"]:focus,
+input[type="password"]:focus {border-color: #003876; background-color: #fff; outline: none; }
+
+
+/* placeholder */
+input[type="text"]:-webkit-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]:-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]:-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]::-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]::-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]::placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="text"]:placeholder  {color: #888 !important; font-weight: 400 !important; }
+
+input[type="password"]:-webkit-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]:-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]:-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]::-ms-input-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]::-moz-placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]::placeholder  {color: #888 !important; font-weight: 400 !important; }
+input[type="password"]:placeholder  {color: #888 !important; font-weight: 400 !important; }
+
+
+/* readonly */
+input[type="text"]:read-only {background-color: #eee; border-color: #ccc; color: #aaa; }
+input[type="text"]:read-only:focus {background-color: #eee; border-color: #ccc; color: #aaa; }
+
+input[type="password"]:read-only {background-color: #eee; border-color: #ccc; color: #aaa; }
+input[type="password"]:read-only:focus {background-color: #eee; border-color: #ccc; color: #aaa; }
+
+/* disabled */
+input[type="text"]:disabled {background-color: #eee; color: #aaa; cursor: not-allowed; }
+input[type="text"]:disabled:focus {background-color: #eee; border-color: #ccc;  color: #aaa; cursor: not-allowed; }
+
+input[type="password"]:disabled {background-color: #eee; color: #aaa; cursor: not-allowed; }
+input[type="password"]:disabled:focus {background-color: #eee; border-color: #ccc;  color: #aaa; cursor: not-allowed; }
+
+/* size */
+input.small {width: 150px; }
+input.large {width: 500px; }
+
+
+
+/* Text Area 입력영역
+-----------------------------------------------------*/
+textarea {display: block; width: 100%; height: 200px; padding: 15px 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; background-color: #fff; font-size: 14px; font-weight: 400; color: #444; }
+textarea:focus {border-color: #003876; background-color: #fff; }
+
+
+
+/* Select 콤보상자
+-----------------------------------------------------*/
+select {display: inline-block; width: 200px; height: 30px; padding: 0 30px 0 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; background-image: url("../images/common/select_arrow.svg"); background-repeat: no-repeat; background-size: 6px auto; background-position: right 15px center; font-size: 14px; color: #444; -webkit-appearance:none; /* for chrome */ -moz-appearance:none; /*for firefox*/ appearance:none; }
+
+selectselect::-ms-expand {display: none; }
+
+select:focus {border-color: #003876; background-color: #fff; outline: none; }
+select:disabled {background-color: #eee; border-color: #ccc; color: #aaa; }
+
+select.small {width: 100px; }
+select.large {width: 400px; }
+
+
+/* Checkbox, Radio
+-----------------------------------------------------*/
+input[type="checkbox"] {display: none; }
+input[type="checkbox"] + label {position: relative; font-size: 13px; color: #666; line-height: 1; }
+input[type="checkbox"] + label:before {content: ""; display: inline-block; width: 18px; height: 18px; margin-right: 8px; border-radius: 3px; border: 1px solid #ddd; box-sizing: border-box; background-color: #fff; vertical-align: middle; }
+
+input[type="checkbox"]:focus + label:before {border-color: #003378; }
+
+input[type="checkbox"]:checked + label:before {border-color: #003378; background-color: #003378; background-image: url("../images/common/checkbox.svg"); background-repeat: no-repeat; background-position: center center; background-size: 10px auto; }
+
+input[type="radio"] {display: none; }
+input[type="radio"] + label {position: relative; font-size: 13px; color: #666; line-height: 1; }
+input[type="radio"] + label:before {content: ""; display: inline-block; width: 18px; height: 18px; margin-right: 8px; border-radius: 999px; border: 1px solid #ddd; box-sizing: border-box; background-color: #fff; vertical-align: middle; }
+
+input[type="radio"]:focus + label:before {border-color: #003378; }
+input[type="radio"]:checked + label:before {border-color: #003378; background-color: #003378; }
+input[type="radio"]:checked + label:after {content: ""; display: block; position: absolute; top: 50%; left: 5px; width: 8px; height: 8px; border-radius: 999px; background-color: #fff; transform: translateY(-50%); }
+
+
+
+
+/* ===================================================
+	pagination
+====================================================*/
+.pagination {}
+.pagination:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+.pagination li {float: left; }
+.pagination li + li {margin-left: 10px; }
+.pagination button {width: 30px; height: 30px; border: 1px solid #d0d0d0; border-radius: 5px; background-color: #fff; font-size: 14px; font-weight: 300; color: #888; text-align: center; }
+.pagination button:hover {background-color: #f7f8f9; }
+.pagination .active button {border-color: #003378; background-color: #003378; font-weight: 400; color: #fff; }
+
+
+.pagination .prev {background-image: url("../images/common/pagination_prev.svg"); background-repeat: no-repeat; background-position: center center; background-size: 7px auto; }
+.pagination .next {background-image: url("../images/common/pagination_next.svg"); background-repeat: no-repeat; background-position: center center; background-size: 7px auto; }
+
+
+
+/* ===================================================
+	page-bottom
+====================================================*/
+.page-bottom {position: relative; text-align: center; }
+
+.page-bottom select {position: absolute; top: 0; left: 0; }
+.page-bottom .pagination {display: inline-block; }
+
+
+

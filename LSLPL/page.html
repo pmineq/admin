@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL PAGE</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+  <!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- 플러그인 css -->
+  <link rel="stylesheet" href="css/plugins/datepicker/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.css">
+
+
+  <!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+  <!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.tab.js"></script>
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+  <script src="js/plugins/file/dropzone.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+<script>
+var $vaiConfig ={};
+</script>
+  
+</head>
+
+<body>
+
+
+<div id="wrapper" class="wrapper">
+	<!-- S: header -->
+	<div id="headerContainer" class="nav-close">
+		<header id="header" class="header">	
+			<h1 class="logo">
+				<a href="page.html" alt="logo">
+					<img src="images/common/logo.png" alt="logo" class="pc">
+				</a>
+			</h1>
+			<div class="header-util">
+				<div class="search-common"> 
+					<select class="select"> 
+						<option>Toyota Tsusho Material Incorporated</option>
+						<option>SAMSUNG</option>
+						<option>APPLE</option>
+					</select>
+					<div class="search-input-group">
+						<input type="text" class="input-text" placeholder="검색">
+						<button type="button" class="btn"><span class="visuallyhidden">검색</span></button>
+					</div>
+				</div>
+
+				<div class="header-right"> 
+					<ul>
+						<li class="header-user-wrap">
+							<button type="button" class="btn header-user" @click="userDropDown()">
+								<!-- <em>RW 원료</em> -->
+								<span>ID_Honggildong</span> 
+							</button>
+							<div class="user-popup" :class="shwoDropDownMenu?'show-layer':''">
+								<ul>
+									<li><a href="#" class="btn"><i class="fa fa-user-o"></i>관리자</a></li>
+									<li><a href="#" class="btn"><i class="fa fa-external-link"></i>제품</a></li>
+									<li><a href="#" class="btn"><i class="fa fa-external-link"></i>원료</a></li>
+									<li><a href="#" class="btn"><i class="fa fa-sign-out"></i>로그아웃</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+	
+	<!-- E: header -->
+
+		<!-- S: nav-wrap -->
+		<nav  id="bizMenu" class="nav-wrap">				
+			<div class="menu-choice"> 
+				<button type="button" @click="menuChoice('menu')" class="menu active">Menu</button>
+				<button type="button" @click="menuChoice('favorite')" class="favorite">Favorite</button>
+			</div>
+			
+			<div class="search-input-group">
+				<template v-if="menuViewMode=='menu'">
+					<input type="text" class="input-text" placeholder="검색">
+					<button type="button" class="btn"><span class="visuallyhidden">검색</span></button>
+				</template>
+				<template v-else>
+					
+					<span class="left" v-if="!favoriteEditable">
+						<a class="btn-open" @click="allToggle('open')" ><i class="fa fa-folder-open"></i>열기</a>
+						<a class="btn-close" @click="allToggle('close')"><i class="fa fa-folder"></i>닫기</a>
+					</span>
+					<span class="right">
+						<template v-if="favoriteEditable">
+							<a class="btn-add" @click="createFolder('#')"><i class="fa fa-plus"></i>폴더추가</a>
+							<a class="btn-save" @click="bookmarkModeChange('save')" ><i class="fa fa-save"></i>저장</a>
+							<a @click="bookmarkModeChange('cancel')" ><i class="fa fa-reply"></i>취소</a>
+						</template>
+						<template v-else>
+							<a @click="bookmarkModeChange('edit')" ><i class="fa fa-gear"></i>편집</a>
+						</template>
+					</span>
+				</template>
+			</div>
+
+			<ul id="menuArea" class="nav menu" :class="menuViewMode=='menu'?'active':''">
+				<!-- 열려있는 페이지의 대분류 li에 current 추가 -->
+
+				<li v-for="(item, index) in oneDepthMenus" class="depth" :class="item.isActive? 'active' :''">
+					<button class="nav-title" @click="subMenuView(item)">
+						{{item.menuName}}
+					</button>
+
+					<ul v-if="item.children.length > 0" class="nav-category">
+						<li v-for="(childItem, index) in item.children">
+							<a href="javascript:;" @click="menuview(childItem)" class="category-menu">
+								{{childItem.menuName}}
+							</a>
+							<!-- 즐겨찾기 누르면 아래 active 클래스 추가 -->
+							<button type="button" class="btn-favorite fa fa-star"></button>
+						</li>
+					</ul>
+				</li>
+
+				<!-- 아래부터 퍼블 -->
+
+				<!-- S: 1depth-->
+				<li>
+					<a href="#" class="category-menu">1depth1depth1depth1depth1depth1depth</a>
+					<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+				</li>
+				<!-- E: 1depth -->
+
+				<!-- S: 2depth -->
+				<li>
+					<button type="button" class="nav-title" onclick="parentsToggle(this)">
+						2depth2depth2depth2depth2depth2depth2depth2depth
+					</button>
+					<ul class="nav-category">
+						<li>
+							<button type="button" class="category-menu">1depth</button>
+							<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+						</li>
+					</ul>
+				</li>
+				<!-- E: 2depth -->
+
+				<!-- S: 3depth -->
+				<li>
+					<button type="button" class="nav-title" onclick="parentsToggle(this)">
+						3depth3depth3depth3depth3depth3depth3depth
+					</button>
+					<ul class="nav-category">
+						<li>
+							<a href="#" class="category-menu">2depth2depth2depth2depth2depth2depth2depth2depth</a>
+							<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+						</li>
+						<li>
+							<button type="button" class="nav-title"  onclick="parentsToggle(this)">2depth</button>
+							<ul class="nav-category">
+								<li>
+									<a href="#" class="category-menu">1depth1depth1depth1depth1depth1depth1depth1depth1depth1depth1depth1depth1depth</a>
+									<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+								</li>
+								<li>
+									<a href="#" class="category-menu">1depth</a>
+									<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="category-menu">2depth</a>
+							<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+						</li>
+						<li>
+							<a href="#" class="category-menu">2depth</a>
+							<button type="button" class="btn-favorite fa fa-star" onclick="activeToggle(this)"></button>
+						</li>
+					</ul>
+				</li>
+				<!-- E: 3depth -->
+			</ul>
+
+			<div id="menuFavoriteArea" class="nav favorite" :class="menuViewMode=='favorite'?'active':''">
+				<div id="menuFavoriteTree"></div>
+			</div>
+		</nav>
+	</div>
+	<!-- S: nav-wrap -->
+
+	<!-- S: container -->
+	<div class="container">
+
+		<!-- S: contents -->
+		<div class="contents">
+			<!-- background -->
+			<div class="wrap-back ep_frame_background">
+				<div class="wrap-back-in"></div>
+				<iframe frameborder="0"></iframe>
+			</div>	
+			<!-- S: contents-tab -->
+			<div class="contents-tab">
+				<button @click="menuToggle()" type="button" class="btn-nav-close" onclick="menubtnToggle(this)">
+					<span class="line-wrap">
+						<i class="line"></i>
+						<i class="line"></i>
+						<i class="line"></i>
+					</span>
+					<span class="visuallyhidden">메뉴 닫기</span> 
+				</button>
+				<div id="menuTab"></div>
+			</div>
+			<!-- E: contents-tab -->
+
+			<div class="main-content-wrapper on" data-cont-type="frame">
+				<iframe src="component.html" frameborder="0" name="epContentViewFrame" id="epContentViewFrame" class="main-content-area"></iframe>
+			</div>
+			<!-- <div class="main-content-wrapper " data-cont-type="main">
+				제품 메인 화면
+				<table style="width:100%;height:100%;">
+					<tr>
+						<td style="vertical-align:top;">
+							<ul>
+								<li><a href="/webstatic/html/page.html">디자인 </a></li>
+								<li><a href="/webstatic/html/page2.html">디자인 & 페이지 연동</a></li>
+								<li><a href="/mtral/sample">원료 </a></li>
+								<li><a href="/prduct/contract/management">계약 관리 </a></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div> -->
+
+		</div>
+		<!-- E: contents -->
+
+	</div>
+	<!-- E: container -->
+
+	<!-- S: footer -->
+	<footer class="footer">
+	  <div class="footer-inner">
+	    All Name, Logos and Trademarks are the Property of LS-Nikko Copper Inc.<br>
+	    Copyright LS-Nikko Copper Inc. All rights reserved.
+	  </div>
+	</footer>
+	<!-- E: footer -->
+</div>
+
+</body>
+</html>
+
+<!-- 사용자 js -->
+<script src="js/design.js"></script>

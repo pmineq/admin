@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1200">
+
+    <!-- 기본 css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+    <!-- 디자인 css -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- 기본 js -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- 디자인 js -->
+    <script type="text/javascript" src="js/design.js"></script>
+
+    <style>
+      /* style guide를 위한 임시 css */
+      .design-title {margin-bottom: 15px; font-size: 28px; color: #222; }
+      .text {margin: 15px 0 30px; font-size: 14px; color: #444; text-align: left; }
+
+      section {margin: 20px 0 40px; }
+      .vertical {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-lines: multiple; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+      .vertical div {margin: 10px 20px 0 0; }
+      .vertical div:last-child {margin-right: 0; }
+      .vertical .text {text-align: center; }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- S: wrapper -->
+    <div id="wrapper">
+
+      <!-- S: header -->
+      <header id="header">
+        <button type="button" class="header-menu"><span class="visuallyhidden">메뉴 열고 닫기</span></button>
+        <div class="header-logo">
+          <img src="images/common/logo_w.png" alt="로고">
+        </div>
+
+        <div class="header-util">
+          
+          <button type="button" class="header-notice">
+            <span class="visuallyhidden">알림</span>
+            <span class="badge">1</span>
+          </button>
+
+          <div class="header-user">
+            <div class="thumb">
+              <!-- 프로필 사진 설정한 경우 -->
+              <img src="images/sample/user.jpg" alt="프로필사진">
+            </div>
+            <span class="name">홍길동</span>
+          </div>
+
+          <button type="button" class="header-logout">logout</button>
+
+        </div>
+      </header>
+      <!-- E: header -->
+
+
+      <!-- S: lnb -->
+      <nav class="lnb">
+        <ul>
+          <li class="lnb-home">
+            <a href="main.html">Home</a>
+          </li>
+
+          <!-- 버튼 누르면 li open -->
+          <li>
+            <button type="button" class="lnb-title">기준정보</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <!-- 누른 페이지 active -->
+              <li class="active">
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">구매이력</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">통계</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button type="button" class="lnb-title">게시판</button>
+            <ul class="sub-menu">
+              <li>
+                <a href="#">법인관리</a>
+              </li>
+              <li>
+                <a href="#">사업장관리</a>
+              </li>
+              <li>
+                <a href="#">메뉴관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 관리</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정 (Group)</a>
+              </li>
+              <li>
+                <a href="#">사용자 권한설정</a>
+              </li>
+              <li>
+                <a href="#">메뉴명메뉴명 메뉴명 메뉴명 메뉴명 메뉴명메뉴명</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="lnb-time">
+          <div class="time">
+            <span>Session Time</span>
+            <strong>17:50</strong>
+          </div>
+          <button type="button" class="btn-reset">reset</button>
+        </div>
+      </nav>
+      <!-- E: lnb -->
+    
+
+      <!-- S: container -->
+      <div id="container">
+
+        <div class="contents">
+
+          <ul class="breadcrumbs">
+            <li>breadcrumbs01</li>
+            <li>breadcrumbs02</li>
+          </ul>
+
+          <div class="box">
+
+            <h2 class="design-title">breadcrumbs</h2>
+            <section>
+              <ul class="breadcrumbs">
+                <li>breadcrumbs01</li>
+                <li>breadcrumbs02</li>
+              </ul>
+            </section>
+
+            <h2 class="design-title">title</h2>
+            <section>
+
+              <div class="title-wrap">
+                <i class="icon icon-search"></i>
+                <h3 class="title">아이콘+타이틀</h3>
+              </div>
+              <p class="text">.title-wrap > .icon + .title</p>
+
+              <h3 class="title">단독사용</h3>
+              <p class="text">.title</p>
+
+            </section>
+
+            <hr>
+
+            <h2 class="design-title">button</h2>
+            <section class="vertical">
+              <div>
+                <button type="button" class="btn">Button</button>
+                <a href="#" class="btn">Button</a>
+                <p class="text">.btn</p>
+              </div>
+
+              <div>
+                <button type="button" class="btn small">Button</button>
+                <a href="#" class="btn small">Button</a>
+                <p class="text">.btn.small</p>
+              </div>
+              
+              <div>
+                <button type="button" class="btn small">
+                  <i class="icon icon-search02"></i>
+                  조회
+                </button>
+                <a href="#" class="btn small">
+                  <i class="icon icon-search02"></i>
+                  조회
+                </a>
+                <p class="text">.btn > icon + text</p>
+              </div>
+            </section>
+
+            <hr>
+
+            <h2 class="design-title">input</h2>
+            <p>기본 default 사이즈 250px이며, small (150px) 클래스명과 large (500px) 클래스명으로 사이즈 조절 가능 합니다.</p>
+            <section class="vertical">
+
+              <div>
+                <label for="input01">label</label>
+                <input type="text" id="input01" placeholder="placeholder">
+                <p class="text">default</p>
+              </div>
+
+              <div>
+                <label for="input02">label</label>
+                <input type="text" id="input02" class="small" placeholder="placeholder">
+                <p class="text">.small</p>
+              </div>
+
+              <div>
+                <label for="input03">label</label>
+                <input type="text" id="input03" class="large" placeholder="placeholder">
+                <p class="text">.large</p>
+              </div>
+
+            </section>
+
+            <hr>
+
+            <h2 class="design-title">select</h2>
+            <p>기본 default 사이즈 200px이며, small (100px) 클래스명과 large (400px) 클래스명으로 사이즈 조절 가능 합니다.</p>
+            <section class="vertical">
+
+              <div>
+                <label for="select01">label</label>
+                <select id="select01">
+                  <option>전체</option>
+                  <option>선택1</option>
+                </select>
+                <p class="text">default</p>
+              </div>
+
+              <div>
+                <label for="select02">label</label>
+                <select id="select02" class="small">
+                  <option>전체</option>
+                  <option>선택1</option>
+                </select>
+                <p class="text">.small</p>
+              </div>
+
+              <div>
+                <label for="select03">label</label>
+                <select id="select03" class="large">
+                  <option>전체</option>
+                  <option>선택1</option>
+                </select>
+                <p class="text">.large</p>
+              </div>
+
+            </section>
+
+            <hr>
+
+            <h2 class="design-title">checkbox & radiobox</h2>
+
+            <section class="vertical">
+              <div>
+                <input type="checkbox" id="id_save">
+                <label for="id_save">아이디 저장</label>
+              </div>
+              <div>
+                <input type="radio" id="radio01" name="radio">
+                <label for="radio01">선택01</label>
+                <input type="radio" id="radio02" name="radio">
+                <label for="radio02">선택02</label>
+                <input type="radio" id="radio03" name="radio">
+                <label for="radio03">선택03</label>
+              </div>
+            </section>
+            <hr>
+
+            <h2 class="design-title">pagination</h2>
+            <section>
+              <ul class="pagination">
+                <li>
+                  <button type="button" class="prev"><span class="visuallyhidden">이전으로</span></button>
+                </li>
+                <li>
+                  <button type="button">1</button>
+                </li>
+                <li>
+                  <button type="button">2</button>
+                </li>
+                <!-- 현재 페이지 active -->
+                <li class="active">
+                  <button type="button">3</button>
+                </li>
+                <li>
+                  <button type="button">4</button>
+                </li>
+                <li>
+                  <button type="button">5</button>
+                </li>
+                <li>
+                  <button type="button" class="next"><span class="visuallyhidden">다음으로</span></button>
+                </li>
+              </ul>
+            </section>
+
+            <hr>
+
+            <h2 class="design-title">page-bottom</h2>
+            <section>
+              <div class="page-bottom">
+                <select class="small">
+                  <option>10개</option>
+                  <option>20개</option>
+                  <option>30개</option>
+                  <option>40개</option>
+                  <option>50개</option>
+                </select>
+                <ul class="pagination">
+                  <li>
+                    <button type="button" class="prev"><span class="visuallyhidden">이전으로</span></button>
+                  </li>
+                  <li>
+                    <button type="button">1</button>
+                  </li>
+                  <li>
+                    <button type="button">2</button>
+                  </li>
+                  <!-- 현재 페이지 active -->
+                  <li class="active">
+                    <button type="button">3</button>
+                  </li>
+                  <li>
+                    <button type="button">4</button>
+                  </li>
+                  <li>
+                    <button type="button">5</button>
+                  </li>
+                  <li>
+                    <button type="button" class="next"><span class="visuallyhidden">다음으로</span></button>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- E: container -->
+
+      <!-- S: footer -->
+      <footer id="footer">
+        ⓒFrameLS 2022
+      </footer>
+      <!-- E: footer -->
+
+    </div>
+    <!-- E: wrapper -->
+  </body>
+</html>

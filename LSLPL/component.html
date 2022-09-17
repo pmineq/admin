@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=1024">
+  <meta property="og:image" content="images/common/share.png">
+  <meta property="me2:image" content="images/common/share.png">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>LPL PAGE</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+
+	<!-- 기본 css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.toast.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/pub.all.min.css">
+  
+  <!-- 플러그인 css -->
+    <link rel="stylesheet" href="css/plugins/datepicker/datepicker.css">
+
+  <link rel="stylesheet" href="css/plugins/jstree/default/style.min.css">
+
+  <!-- grid css -->
+  <link href="css/AUIGrid_style.css" rel="stylesheet">
+	<!-- 기본 : 추가 css -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+
+	<!-- 사용자 css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 기본 js -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.serializeJSON.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pub.autocomplete.js"></script>
+  <script src="js/pub.context.js"></script>
+  <script src="js/pub.ep.js"></script>
+  <script src="js/pub.ep.ui.js"></script>
+  <script src="js/pub.grid.js"></script>
+  <script src="js/pub.multiselect2.js"></script>
+  <script src="js/pub.resizer.js"></script>
+  <script src="js/pub.splitter.js"></script>
+  <script src="js/pub.tab.js"></script>
+
+
+  <!--grid js -->
+  <script src="js/AUIGridLicense.js"></script>
+  <script src="js/AUIGrid.js"></script>
+
+  <!-- 플러그인 js -->
+  <script src="js/plugins/axios/axios.min.js"></script>
+  <script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="js/plugins/filesaver/FileSaver.min.js"></script>
+  <script src="js/plugins/fuse/fuse.min.js"></script>
+  <script src="js/plugins/jstree/jstree.min.js"></script>
+  <script src="js/plugins/toast/jquery.toast.min.js"></script>
+  <script src="js/plugins/vue/vee-validate.min.js"></script>
+
+
+  <script src="js/vai.js"></script>
+  <script src="js/vai-grid.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue.vai.js"></script>
+  <!-- 사용자 js -->
+  <script src="js/design.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="contents-box">
+		<!-- S: search-wrap -->
+		<div class="search-wrap">
+			<button type="button" class="btn-search-close"><span class="visuallyhidden">검색창 닫기</span></button>
+			<div class="form-wrap">
+				<table>
+					<colgroup>
+						<col width="100px">
+						<col width="40%">
+						<col width="100px">
+						<col width="40%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>
+								<label for="input01" class="input-title">입력구분</label>
+							</th>
+							<td>
+								<select class="select">
+									<option>계약형태1</option>
+									<option>계약형태2</option>
+									<option>계약형태3</option>
+								</select>
+								<select class="select">
+									<option>계약형태1</option>
+									<option>계약형태2</option>
+									<option>계약형태3</option>
+								</select>
+							</td>
+							<th><label class="input-title">기간</label></th>
+							<td>
+								<div class="datepicker-wrap">
+									<input type="text" class="input-datepicker" id="input02"> <span class="swing">~</span> <input type="text" class="input-datepicker" id="input03">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="input04" class="input-title">검색어</label></th>
+							<td>
+								<input type="text" class="input-search" id="input04">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn bg-main btn-round btn-search">조회</button>
+				<button type="button" class="btn btn-round btn-search">초기화</button>
+			</div>
+		</div>
+		<!-- E: search-wrap -->
+
+		<!-- S: contents-detail -->
+		<div class="contents-detail">
+
+			<div class="box">
+				<p class="title medium">Common</p>
+
+				<p><span style="font-size: 55px;">Aa</span> :: Roboto</p>
+				<p><span style="font-size: 45px;">가나</span> :: NotosansKR</p>
+
+				<hr>
+
+				<div style="width: 100px; height: 50px; border-radius: 5px;" class="bg-main"></div>
+				<p>.bg-main :: container Bg / 저장 버튼 등</p><br>
+				<div style="width: 100px; height: 50px; border-radius: 5px;" class="bg-point"></div>
+				<p>.bg-point :: 강조될 부분에 쓰인다.</p><br>
+				<div style="width: 100px; height: 50px; border-radius: 5px;" class="bg-red"></div>
+				<p>.bg-red :: 삭제 버튼</p><br>
+				<div style="width: 100px; height: 50px; border-radius: 5px;" class="bg-black"></div>
+				<p>.bg-black :: 편집 및 수정버튼, 또는 기본 버튼 bg로 사용</p><br>
+
+				<hr>
+
+				<p class="color-main">.color-main</p><br>
+				<p class="color-point">.color-point</p><br>
+				<p class="color-red">.color-red</p>
+
+				<hr>
+				
+				<p class="text-left">왼쪽정렬 .text-left</p>
+				<p class="text-center">가운데정렬 .text-center</p>
+				<p class="text-right">오른쪽정렬 .text-right</p>
+			</div>
+
+			<div class="box">
+				<strong class="title">.title</strong>
+				<strong class="title medium">.title.medium</strong>
+				<strong class="title small">.title.small</strong>
+				<div class="page-header">
+					<strong class="title small">.Page-header > .title.small + .btn</strong>
+					<div class="btn-group">
+						<button type="button" class="btn bg-main small">Button</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<p class="title medium">.file-btn-group > input[:file] + .btn</p>
+				<div class="file-btn-group">
+					<input type="file">
+					<button type="button" class="btn small bg-main">저장</button>
+					<button type="button" class="btn small bg-black">수정</button>
+					<button type="button" class="btn small bg-red">삭제</button>
+				</div>
+			</div>
+
+			<div class="box">
+				<p class="title medium">Table :: .table-style01</p>
+				<p>.sub-th 클래스를 주면 옅은 하늘색 bg로 변경됩니다.</p>
+				<!-- S: table-style01 -->
+				<div class="table-style01">
+					<table>
+						<colgroup>
+							<col width="8%">
+							<col width="20%">
+							<col width="16%">
+							<col width="34%">
+							<col width="14%">
+							<col width="14%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th colspan="6">운송위임 현황</th>
+							</tr>
+							<tr>
+							<td class="sub-th">No.</td>
+							<td class="sub-th">운송업체명</td>
+							<td class="sub-th">판매처명</td>
+							<td class="sub-th">납품처명</td>
+							<td class="sub-th">위임시작일</td>
+							<td class="sub-th">위임종료일</td>
+							</tr>
+							<tr>
+							<td>①</td>
+							<td>(주)프라임 글로벌</td>
+							<td class="text-left">현대글로비스</td>
+							<td>현대글로비스 주식회사_넥상스</td>
+							<td class="text-right">2020-06-01</td>
+							<td class="text-right">2022-01-31</td>
+							</tr>
+							<tr>
+							<td>②</td>
+							<td>제이아이해운항공주식회사</td>
+							<td class="text-left">현대글로비스</td>
+							<td>현대글로비스 주식회사_넥상스대영</td>
+							<td class="text-right">2020-06-01</td>
+							<td class="text-right">2022-01-31</td>
+							</tr>
+							<tr>
+							<td>③</td>
+							<td>(주)프라임 글로벌</td>
+							<td class="text-left">현대글로비스</td>
+							<td>현대글로비스 주식회사_극동전선</td>
+							<td class="text-right">2020-06-01</td>
+							<td class="text-right">2022-01-31</td>
+							</tr>
+							<tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- E: table-style01 -->
+			</div>
+
+			<div class="box">
+				<p class="title medium">button</p>
+				<button type="button" class="btn">.btn</button>
+				<a href="#" class="btn">a.btn</a>
+				<hr>
+				<button type="button" class="btn full">.btn.full</button><br>
+				<button type="button" class="btn half">.btn.half</button>
+				<hr>
+				<button type="button" class="btn big">.btn.big</button>
+				<button type="button" class="btn small">.btn.small</button>
+				<hr>
+				<p class="title medium">button + bg</p>
+				<button type="button" class="btn bg-main">.btn.bg-main</button>
+				<button type="button" class="btn bg-point">.btn.bg-point</button>
+				<button type="button" class="btn bg-red">.btn.bg-red</button>
+				<button type="button" class="btn bg-black">.btn.bg-black</button>
+				<hr>
+				<p class="title medium">.btn-icon.manager</p>
+				<button type="button" class="btn btn-icon bg-main small manager">운송위임 갱신 확인 요청</button>
+				<p class="title medium">.btn-icon.business</p>
+				<button type="button" class="btn btn-icon bg-main small business">사업자등록증 변경</button>
+
+			</div>
+
+			<div class="box">
+				<p class="title medium">.input-text</p>
+				<input type="text" class="input-text"> <input type="text" class="input-text" placeholder="placeholder">
+				<p class="title medium">.input-text:readonly</p>
+				<input type="text" class="input-text" readonly> <input type="text" class="input-text" placeholder="placeholder" readonly>
+				<p class="title medium">.input-text:disabled</p>
+				<input type="text" class="input-text" disabled> <input type="text" class="input-text" placeholder="placeholder" disabled>
+				<hr>
+				<p class="title medium">.input-text.full</p>
+				<input type="text" class="input-text full">
+				<p class="title medium">.input-text.half</p>
+				<input type="text" class="input-text half">
+				<p class="title medium">.input-text.big</p>
+				<input type="text" class="input-text big">
+				<p class="title medium">.input-text.small</p>
+				<input type="text" class="input-text small">
+				<hr>
+				<p class="title medium">.textarea</p>
+				<textarea class="textarea"></textarea>
+				<hr>
+				<p class="title medium">.select</p>
+				<select class="select">
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+				<p class="title medium">.select:readonly</p>
+				<select class="select" readonly>
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+				<hr>
+				<p class="title medium">.select.full</p>
+				<select class="select full">
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+				<p class="title medium">.select.half</p>
+				<select class="select half">
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+				<p class="title medium">.select.big</p>
+				<select class="select big">
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+				<p class="title medium">.select.small</p>
+				<select class="select small">
+					<option>option01</option>
+					<option>option02</option>
+					<option>option03</option>
+				</select>
+			</div>
+
+			<div class="box">
+				<p class="title medium">checkbox</p>
+				<input type="checkbox" id="check00">
+				<label for="check00">check00</label>
+				<p class="title medium">radio</p>
+				<input type="radio" id="radio00">
+				<label for="radio00">radio00</label>
+				<hr>
+				<p class="title medium">check-group</p>
+				<div class="check-group">
+					<input type="checkbox" id="checkbox01">
+					<label for="checkbox01">checkbox01</label>
+					<input type="checkbox" id="checkbox02">
+					<label for="checkbox02">checkbox02</label>
+					<input type="checkbox" id="checkbox03">
+					<label for="checkbox03">checkbox03</label>
+				</div>
+				<hr>
+				<p class="title medium">radio-group</p>
+				<div class="radio-group">
+					<input type="radio" id="radio01" name="radio">
+					<label for="radio01">radio01</label>
+					<input type="radio" id="radio02" name="radio">
+					<label for="radio02">radio02</label>
+					<input type="radio" id="radio03" name="radio">
+					<label for="radio03">radio03</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- E: contents-detail -->
+	</div>
+</body>
+</html>
